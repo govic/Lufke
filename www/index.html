@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
-
     <!-- css aplicacion -->
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="app/app.css" rel="stylesheet">
-
     <!-- css secciones de la aplicacion -->
-    <script src="app/login/login.css"></script>
-    <script src="app/registro/registro.css"></script>
-    
-  </head>
-  <body ng-app="lufke">
+    <link href="app/start/start.css" rel="stylesheet">
+    <link href="app/login/login.css" rel="stylesheet">
+    <link href="app/registro/registro.css" rel="stylesheet">
+    <link href="app/newsfeed/newsfeed.css" rel="stylesheet">
+</head>
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Lufke</h1>
-      </ion-header-bar>
-      
-      <!-- Contenido dinamico -->
-      <ion-nav-view></ion-nav-view>
+<body ng-app="lufke">
+    <!-- Contenido dinamico -->
+    <ion-nav-view></ion-nav-view>
 
-      <!-- ionic/angularjs js -->
-      <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    <!-- js secciones de la aplicacion -->
+    <script src="app/start/start.controller.js"></script>
+    <script src="app/start/start.js"></script>
+    <script src="app/login/login.controller.js"></script>
+    <script src="app/login/login.js"></script>
+    <script src="app/registro/registro.controller.js"></script>
+    <script src="app/registro/registro.js"></script>
+    <script src="app/newsfeed/newsfeed.controller.js"></script>
+    <script src="app/newsfeed/newsfeed.js"></script>
+</body>
 
-      <!-- cordova script (this will be a 404 during development) -->
-      <script src="cordova.js"></script>
-
-      <!-- your app's js -->
-      <script src="app/app.js"></script>
-
-      <!-- js secciones de la aplicacion -->
-      <script src="app/login/login.controller.js"></script>
-      <script src="app/login/login.js"></script>
-      <script src="app/registro/registro.controller.js"></script>
-      <script src="app/registro/registro.js"></script>
-
-    </ion-pane>
-  </body>
 </html>

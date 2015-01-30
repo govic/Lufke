@@ -1,12 +1,26 @@
-<ion-view view-title="Lufke">
-  <ion-content class="padding">
-    <div class="list card">
-      <div class="item item-divider">Prueba carga pagina login</div>
-      <div class="item item-body">
-        <div>
-          Datos de prueba: <b>{{dato_prueba}}</b>
-        </div>
-      </div>
+<ion-pane>
+
+    <div class="bar bar-header">
+        <div class="h1 title">Login</div>
     </div>
-  </ion-content>
-</ion-view>
+
+    <form name="loginForm" novalidate ng-submit="loginForm.$valid && validaUsuario()" class="content has-header css-form">
+        <div class="list">
+            <label class="item item-input">
+                <input ng-model="usuario.correo" type="email" placeholder="Correo" required>
+            </label>
+            <label class="item item-input">
+                <input ng-model="usuario.password" type="password" placeholder="Contraseña" required>
+            </label>
+        </div>
+        <div class="card" ng-show="loginError">
+            <div class="item item-text-wrap assertive">
+                El correo o la contraseña ingresado no son válidos.
+            </div>
+        </div>
+        <div class="padding">
+            <input type="submit" class="button button-block button-positive" value="Iniciar sesión"></input>
+        </div>
+    </form>
+
+</ion-pane>
