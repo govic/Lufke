@@ -1,4 +1,4 @@
-angular.module('lufke').controller('LoginCtrl', function ($scope) {
+angular.module('lufke').controller('LoginCtrl', function ($scope, $state) {
     console.log('Inicia ... LoginCtrl');
 
     //precarga datos
@@ -16,6 +16,13 @@ angular.module('lufke').controller('LoginCtrl', function ($scope) {
         if ($scope.usuario.correo == "asd@asd.cl" && $scope.usuario.password == "asd") {
             $scope.loginError = false;
             console.log('LoginCtrl ... validaUsuario ... OK');
+            console.log('LoginCtrl ... validaUsuario ... redirect');
+            $state.go('newsfeed'); //redirige hacia newsfeed
+            return;
+            
+            //OJO! despues de hacer el redirect la ejecucion del metodo continua,
+            //es necesario agregar return .. sin embargo, el controller queda cargado
+            
         } else {
             $scope.loginError = true;
         }
