@@ -8,6 +8,7 @@
         <div class="list">
             <label class="item item-input">
                 <input ng-model="usuario.correo" type="email" placeholder="Correo" required>
+                <span ng-show="loginError">(!)</span>
             </label>
             <label class="item item-input">
                 <input ng-model="usuario.password" type="password" placeholder="Contraseña" required>
