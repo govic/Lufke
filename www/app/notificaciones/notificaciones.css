@@ -3,15 +3,25 @@
     height: 40px;
     width: 40px;
 }
-.text-muted {
-    color: #999;
+.img-perfil-notificacion {
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+}
+.text-muted-solicitud {
+    color: #C8C8C8;
+    font-size: 95%;
 }
 .icon-solicitud-ok {
     font-size: 35px;
-    color: #3FD2FF;
+    color: #56BCC5;
 }
-.center-img-perfil-solicitud {
-    padding-right: 10px;
+.align-icon-notif-ir {
+    text-align: right;
+    vertical-align: middle;
+}
+.center-img-perfil-notif {
+    padding-right: 40px;
 }
 .align-boton-soicitud-ok {
     text-align: right;
@@ -19,4 +29,18 @@
 }
 .item-solicitud {
     padding: 0px;
+}
+.contenedor-texto-notificacion {
+    white-space: normal;
+}
+.icon-ir-notificacion {
+    font-size: 35px;
+    color: #C8C8C8;
+}
+.texto-usuario-notificacion {
+    color: #56BCC5;
+    font-weight: 600;
+}
+.texto-tiempo-notificacion {
+    color: #C8C8C8;
 }
