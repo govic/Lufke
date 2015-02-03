@@ -1,0 +1,36 @@
+<a class="item newsfeed-post" style="background-image: url('{{post.background}}');" href="{{post.link}}">
+    <div class="row row-top">
+        <div class="col col-25 newsfeed-post-profilecontainer">
+            <img class="newsfeed-post-profileimg" src="{{post.profile.img}}" alt="Profile picture"/>
+        </div>
+
+        <div class="col newsfeed-post-profiledata">
+            <span class="newsfeed-post-username">{{post.profile.name}}<br/></span>
+
+            <span ng-show="post.location !== ''" class="newsfeed-post-location">
+                <i class="ion-location"></i> {{post.location}}
+            </span>
+        </div>
+
+        <div class="col newsfeed-post-time">
+            <i class="ion-clock"></i> <span>{{post.time}}</span>                        
+        </div>
+    </div>
+
+    <div class="row row-center">
+        <div class="col newsfeed-post-body"></div>
+    </div>
+
+    <div class="row row-bottom">
+        <div class="col">{{post.text}}</div>
+    </div>
+
+    <div class="row row-bottom newsfeed-post-footer">
+        <div class="col">
+            <i class="ion-star"></i> <span>{{post.stars}}</span>
+            <i class="ion-chatbox"></i> <span>{{post.comments}}</span>
+        </div>
+
+        <div class="col newsfeed-post-footer-more"><i class="ion-more"></i></div>
+    </div>
+</a>

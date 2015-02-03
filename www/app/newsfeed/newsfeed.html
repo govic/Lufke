@@ -8,45 +8,9 @@
 
     <ion-content class="padding">
         <div class="list">
-
-            <a class="item newsfeed-post" style="background-image: url('http://goo.gl/56Q265');" href="#">
-                <div class="row row-top">
-                    <div class="col col-25 newsfeed-post-profilecontainer">
-                        <img class="newsfeed-post-profileimg" src="http://goo.gl/qBdA7s"/>
-                    </div>
-                    
-                    <div class="col newsfeed-post-profiledata">
-                        <span class="newsfeed-post-username">Elber Galarga<br/></span>
-                        <span class="newsfeed-post-location">
-                            <i class="ion-location"></i> Pichilemu
-                        </span>
-                    </div>
-                    
-                    <div class="col newsfeed-post-time">
-                        <i class="ion-clock"></i> <span>4h</span>                        
-                    </div>
-                </div>
-
-                <div class="row row-center">
-                    <div class="col newsfeed-post-body"></div>
-                </div>
-
-                <div class="row row-bottom">
-                    <div class="col">Texto del post</div>
-                </div>
-                
-                <div class="row row-bottom newsfeed-post-footer">
-                    <div class="col">
-                        <i class="ion-star"></i> <span>47</span>
-                        <i class="ion-chatbox"></i> <span>47</span>
-                    </div>
-
-                    <div class="col newsfeed-post-footer-more"><i class="ion-more"></i></div>
-                </div>
-            </a>
-
+            <my-post ng-repeat="post in datos"></my-post>
         </div>
     </ion-content>
 </ion-view>
 
-<ng-include src="'app/common/template-maintabs.html'"/>
+<ng-include src="'app/common/template-maintabs.html'"></ng-include>
