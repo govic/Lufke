@@ -13,7 +13,7 @@ angular.module('lufke').controller('LoginCtrl', function ($scope, $state) {
 
         console.log('LoginCtrl ... validaUsuario');
 
-        if ($scope.usuario.correo == "asd@asd.cl" && $scope.usuario.password == "asd") {
+        if ($scope.usuario.correo != "" && $scope.usuario.password != "") {
             $scope.loginError = false;
             console.log('LoginCtrl ... validaUsuario ... OK');
             console.log('LoginCtrl ... validaUsuario ... redirect');
