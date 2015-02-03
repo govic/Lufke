@@ -3,19 +3,23 @@
         <ion-list>
             <ion-item class="item-divider item-solicitud">
                 <div class="row">
-                    <div class="col">
+                    <div class="col" ng-show="solicitudes.lista.length">
                         {{solicitudes.cantidad_total}}&nbsp;{{solicitudes.texto_titulo}}
+                    </div>
+                    <div class="col" ng-show="!solicitudes.lista.length">
+                        SOLICITUDES DE SEGUIMIENTO
                     </div>
                 </div>
             </ion-item>
             <ion-item ng-repeat="item in solicitudes.lista">
                 <div class="row">
-                    <div class="col center-img-perfil-solicitud">
+                    <div class="col center-img-perfil-notif">
                         <img ng-src="{{item.url_img_perfil}}" class="img-perfil-solicitud" />
                     </div>
                     <div class="col col-75">
-                        <h3>{{item.nombre_perfil}}</h3>
-                        <h4 class="text-muted">{{item.usuario_perfil}}</h4>
+                        {{item.nombre_perfil}}
+                        <br />
+                        <span class="text-muted-solicitud">{{item.usuario_perfil}}</span>
                     </div>
                     <div class="col align-boton-soicitud-ok">
                         <span ng-click="aceptarSolicitud(item)">
@@ -27,17 +31,57 @@
                     Ignorar
                 </ion-option-button>
             </ion-item>
-            <ion-item class="item-solicitud">
+            <ion-item ng-show="!solicitudes.lista.length">
+                No tiene solicitudes para mostrar
+            </ion-item>
+            <ion-item class="item-solicitud" ng-show="solicitudes.lista.length">
                 <div class="row">
                     <div class="col"></div>
                     <div class="col col-75">
                         <span ng-click="verSolicitudes()">
-                            VER 18 MÁS <i class="ion-chevron-down"></i>
+                            VER {{solicitudes.cantidad_ver_mas}} MÁS <i class="ion-chevron-down"></i>
                         </span>
                     </div>
                     <div class="col"></div>
                 </div>
             </ion-item>
         </ion-list>
+        <div class="row"><div class="col"></div></div>
+        <div class="list">
+            <div class="item item-divider">
+                NOTIFICACIONES
+            </div>
+            <div class="item" ng-repeat="item in notificaciones.lista">
+                <div class="row">
+                    <div class="col center-img-perfil-notif">
+                        <img ng-src="{{item.url_img_perfil}}" class="img-perfil-notificacion" />
+                    </div>
+                    <div class="col col-75">
+                        <span class="contenedor-texto-notificacion">
+                            <span class="texto-usuario-notificacion">{{item.usuario_perfil}}</span>
+                            {{item.texto_notificacion}}
+                            <span class="texto-tiempo-notificacion">{{item.texto_tiempo}}</span>
+                        </span>
+                    </div>
+                    <div class="col align-icon-notif-ir" ng-click="verNotificacion(item)">
+                        <i class="ion-chevron-right icon-ir-notificacion"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="item" ng-show="!notificaciones.lista.length">
+                No tiene notificaciones para motrar
+            </div>
+            <div class="item" ng-show="notificaciones.lista.length">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col col-75">
+                        <span ng-click="verNotificaciones()">
+                            VER MÁS <i class="ion-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
     </ion-content>
 </ion-view>
