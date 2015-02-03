@@ -1,0 +1,47 @@
+.titulo-seccion {
+    font-weight: 600;
+}
+.ver-todos {
+    text-align: right;
+}
+.img-perfil {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+}
+.link-seguir {
+    background-color:rgba(255,0,0,0.5);
+}
+.content-publicacion {
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    width: 60px;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+}
+.center-icon-publicacion {
+    padding-top: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+.icon-publicacion {
+  font-size: 35px;
+}
+.content-categoria {
+    margin-left: auto;
+    margin-right: auto;
+    height: 122px;
+    width: 122px;
+    background-size: 122px 122px;
+    background-repeat: no-repeat;   
+}
+.nombre-categoria {
+    padding-top: 10px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+}
+.item-publicacion {
+    padding: 0px;
+}
