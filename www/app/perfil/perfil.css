@@ -15,9 +15,7 @@
 }
 .img-background-perfil {
     background-repeat: no-repeat;
-}
-.img-background-perfil {
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 .cantidad-perfil {
     text-shadow: 1px 0px #56BCC5;

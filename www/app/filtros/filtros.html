@@ -1,0 +1,61 @@
+<ion-view view-title="Lufke">
+    <ion-content class="padding">
+        <div class="row">
+            <div class="col">
+                <div class="list">
+                    <div class="item filtros-color-gris">
+                        <div class="row filtros-quita-padding">
+                            <div class="col col-75 filtros-quita-padding">
+                                ¿QUÉ QUIERO VER?
+                            </div>
+                            <div class="col filtros-align-right filtros-quita-padding" ng-click="editarIntereses()">
+                                Editar
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" ng-repeat="item in filtros.intereses">
+                        <div class="row filtros-quita-padding filtros-font-size-intereses">
+                            <div class="col col-10 filtros-color-links filtros-quita-padding">
+                                <span class="fitros-bordes-ranking">
+                                    #{{item.ranking_interes}}
+                                </span>
+                            </div>
+                            <div class="col col-70 filtros-quita-padding filtros-fix-padding-nombre">
+                                {{item.nombre_interes}}
+                            </div>
+                            <div class="col col-20 filtros-align-right filtros-color-gris filtros-quita-padding">
+                                {{item.porcentaje_interes}}%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item filtros-color-gris">
+                        PROPORCIONES
+                    </div>
+                    <div class="item range range-energized">
+                        <i class="ion-camera filtros-icon-size"></i>
+                        <input type="range" ng-model="filtros.proporciones.porcentaje_fotos" min="0" max="100">
+                        <span class="filtros-color-gris filtros-font-size-intereses filtros-fix-padding-prop">{{filtros.proporciones.porcentaje_fotos}}%</span>
+                    </div>
+                    <div class="item range range-assertive">
+                        <i class="ion-play filtros-icon-size"></i>
+                        <input type="range" ng-model="filtros.proporciones.porcentaje_videos" min="0" max="100">
+                        <span class="filtros-color-gris filtros-font-size-intereses filtros-fix-padding-prop">{{filtros.proporciones.porcentaje_videos}}%</span>
+                    </div>
+                    <div class="item range range-calm">
+                        <i class="ion-link filtros-icon-size"></i>
+                        <input type="range" ng-model="filtros.proporciones.porcentaje_enlaces" min="0" max="100">
+                        <span class="filtros-color-gris filtros-font-size-intereses filtros-fix-padding-prop">{{filtros.proporciones.porcentaje_enlaces}}%</span>
+                    </div>
+                    <div class="item filtros-color-gris">
+                        DISTANCIA
+                    </div>
+                    <div class="item range range-calm">
+                        <i class="ion-link filtros-icon-size"></i>
+                        <input type="range" ng-model="filtros.distancia_km" min="0" max="1000">
+                        <span class="filtros-color-gris filtros-font-size-intereses filtros-fix-padding-prop">{{filtros.distancia_km}}KM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

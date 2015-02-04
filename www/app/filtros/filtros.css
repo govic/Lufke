@@ -1,0 +1,38 @@
+.filtros-color-gris {
+    color: #B5B5B5;
+}
+.filtros-align-right {
+    text-align: right;
+}
+.filtros-align-center {
+    text-align: center;
+}
+.filtros-color-links {
+    color: #56BCC5;
+}
+.filtros-quita-padding {
+    padding: 0px;
+}
+.fitros-bordes-ranking {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #FAFAFA;
+    border-color: #B5B5B5;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+}
+.filtros-font-size-intereses {
+    font-size: 110%;
+}
+.filtros-fix-padding-nombre {
+    padding-left: 15px;
+}
+.filtros-fix-padding-prop {
+    padding-right: 5px;
+}
+.filtros-icon-size {
+    padding-left: 8px;
+    font-size: 35px;
+}
