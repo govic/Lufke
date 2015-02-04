@@ -17,7 +17,7 @@ angular.module('lufke').controller('LoginCtrl', function ($scope, $state) {
             $scope.loginError = false;
             console.log('LoginCtrl ... validaUsuario ... OK');
             console.log('LoginCtrl ... validaUsuario ... redirect');
-            $state.go('newsfeed'); //redirige hacia newsfeed
+            $state.go('noticias'); //redirige hacia noticias
             return;
             
             //OJO! despues de hacer el redirect la ejecucion del metodo continua,

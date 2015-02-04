@@ -1,4 +1,11 @@
 <ion-view view-title="Lufke">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon icon ion-search" ui-sref="buscar"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-levels" ui-sref="filtro"></button>
+    </ion-nav-buttons>
+    
     <ion-content class="padding">
         <div class="row titulo-seccion">
             <div class="col">
@@ -52,18 +59,4 @@
     </ion-content>
 </ion-view>
 
-
-<div class="tabs">
-    <a class="tab-item" ui-sref="newsfeed">
-        <i class="icon ion-home"></i>
-    </a>
-    <a class="tab-item" ui-sref="explorar">
-        <i class="icon ion-earth"></i>
-    </a>
-    <a class="tab-item">
-        <i class="icon ion-star" ui-sref="notificaciones"></i>
-    </a>
-    <a class="tab-item">
-        <i class="icon ion-person" ui-sref="perfil"></i>
-    </a>
-</div>
+<ng-include src="'app/comun/plantilla-tabs.html'"></ng-include>
