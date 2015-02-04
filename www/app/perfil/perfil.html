@@ -1,6 +1,7 @@
 <ion-view view-title="Lufke">
     <ion-content class="padding">
-        <div class="row img-background-perfil" style="background-image: url('{{perfil.url_img_fondo}}');">
+        <style type="text/css">{{style_before}}</style>
+        <div class="row img-background-perfil" ng-style="{'background-image': 'url(' + perfil.url_img_fondo + ')'}">
             <div class="col">
                 <div class="row">
                     <div class="col">
@@ -15,7 +16,7 @@
                             <div class="col boton-editar-perfil">
                                 <a class="button button-light button-small" ng-click="editarPerfil(perfil)">
                                     Editar perfil
-                                <a>
+                                </a>
                             </div>
                         </div>
                         <div class="row center-text-perfil light">
@@ -36,9 +37,9 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <p ng-repeat="item in perfil.intereses">
+                        <div ng-repeat="item in perfil.intereses" class="texto-interes-perfil">
                             {{item.texto_interes}}
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
