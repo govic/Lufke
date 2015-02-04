@@ -2,12 +2,19 @@
     border-radius: 100%;
     height: 70px;
     width: 70px;
+    padding:1px;
+    border:1px solid #FF0;
+    background-color: #F3CC5B;
+    filter: blur(5px);
 }
 .texto-link-social-tag {
     color: #56BCC5;
 }
 .center-text-perfil {
     text-align: center;
+}
+.img-background-perfil {
+    background-repeat: no-repeat;
 }
 .img-background-perfil {
     background-repeat: no-repeat;
