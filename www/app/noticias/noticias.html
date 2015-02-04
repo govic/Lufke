@@ -5,12 +5,11 @@
     <ion-nav-buttons side="right">
         <button class="button button-icon icon ion-levels" ui-sref="filtro"></button>
     </ion-nav-buttons>
-
     <ion-content class="padding">
         <div class="list">
-            <my-post ng-repeat="post in datos"></my-post>
+            <lufke-publicacion ng-repeat="publicacion in publicaciones"></lufke-publicacion>
         </div>
     </ion-content>
 </ion-view>
 
-<ng-include src="'app/common/template-maintabs.html'"></ng-include>
+<ng-include src="'app/comun/plantilla-tabs.html'"></ng-include>
