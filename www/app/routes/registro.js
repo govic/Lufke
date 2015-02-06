@@ -3,7 +3,7 @@ angular.module('lufke')
 		$stateProvider
 			.state('registro', {
 				url: '/registro',
-				templateUrl: 'app/registro/registro.html',
+				templateUrl: 'app/templates/registro.html',
 				controller: 'RegistroCtrl'
 			});
 	});

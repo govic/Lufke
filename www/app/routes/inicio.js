@@ -1,7 +1,7 @@
 angular.module('lufke').config(function($stateProvider) {
     $stateProvider.state('inicio', {
         url: '/inicio',
-        templateUrl: 'app/inicio/inicio.html',
+        templateUrl: 'app/templates/inicio.html',
         controller: 'InicioCtrl'
     });
 });

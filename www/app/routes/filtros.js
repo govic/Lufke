@@ -3,7 +3,7 @@ angular.module('lufke')
 		$stateProvider
 			.state('filtros', {
 				url: '/filtros',
-				templateUrl: 'app/filtros/filtros.html',
+				templateUrl: 'app/templates/filtros.html',
 				controller: 'FiltrosCtrl'
 			});
 	});
