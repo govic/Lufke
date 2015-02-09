@@ -1,7 +1,7 @@
-angular.module('lufke').config(function($stateProvider) {
-    $stateProvider.state('login', {
-        url: '/login',
-        templateUrl: 'app/templates/login.html',
-        controller: 'LoginCtrl'
-    });
+angular.module('lufke').config(function ($stateProvider) {
+	$stateProvider.state('login', {
+		url: '/login',
+		templateUrl: 'app/templates/login.html',
+		controller: 'LoginCtrl'
+	});
 });

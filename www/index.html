@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Lufke</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
-    <!-- css aplicacion -->
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="app/app.css" rel="stylesheet">
-    <!-- css secciones de la aplicacion -->
-    <link href="app/styles/inicio.css" rel="stylesheet">
-    <link href="app/styles/login.css" rel="stylesheet">
-    <link href="app/styles/registro.css" rel="stylesheet">
-    <link href="app/styles/noticias.css" rel="stylesheet">
-    <link href="app/styles/explorar.css" rel="stylesheet">
-    <link href="app/styles/notificaciones.css" rel="stylesheet">
-    <link href="app/styles/perfil.css" rel="stylesheet">
-    <link href="app/styles/filtros.css" rel="stylesheet">
-    
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-    <script src="lib/ngstorage/ngStorage.js"></script>
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-    <!-- your app's js -->
-    <script src="app/app.js"></script>
-    <script src="app/services.js"></script>
-    
-    <!-- Scripts reutilizables -->
-    <script src="app/comun/directivas-comun.js"></script>
-    <!-- js secciones de la aplicacion -->
-    <script src="app/controllers/inicio.js"></script>
-    <script src="app/controllers/registro.js"></script>
-    <script src="app/controllers/login.js"></script>
-    <script src="app/controllers/noticias.js"></script>
-    <script src="app/controllers/explorar.js"></script>
-    <script src="app/controllers/notificaciones.js"></script>
-    <script src="app/controllers/perfil.js"></script>
-    <script src="app/controllers/filtros.js"></script>
-        
-    <script src="app/routes/login.js"></script>
-    <script src="app/routes/inicio.js"></script>
-    <script src="app/routes/registro.js"></script>
+        <!-- CSS Aplicacion -->
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+        <link href="app/app.css" rel="stylesheet">
+        <!-- CSS secciones -->
+        <link href="app/styles/login.css" rel="stylesheet">
+        <link href="app/styles/noticias.css" rel="stylesheet">
+        <link href="app/styles/explorar.css" rel="stylesheet">
+        <link href="app/styles/notificaciones.css" rel="stylesheet">
+        <link href="app/styles/perfil.css" rel="stylesheet">
+        <link href="app/styles/filtros.css" rel="stylesheet">
 
-    <script src="app/routes/tabs.js"></script>
-    <script src="app/routes/filtros.js"></script>
-</head>
+        <!-- Dependencies -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="lib/ngstorage/ngStorage.js"></script>
+        <script src="cordova.js"></script><!-- cordova script (this will be a 404 during development) -->
 
-<body ng-app="lufke">
-    <!--
-      The nav bar that will be updated as we navigate between views.
-    -->
+        <!-- your app's js -->
+        <script src="app/app.js"></script>
+
+        <!-- Servicios -->
+        <script src="app/services/publicaciones.js"></script>
+        <!-- Directivas -->
+        <script src="app/directives/publicacion.js"></script>
+        <!-- Controladores -->
+        <script src="app/controllers/inicio.js"></script>
+        <script src="app/controllers/registro.js"></script>
+        <script src="app/controllers/login.js"></script>
+        <script src="app/controllers/noticias.js"></script>
+        <script src="app/controllers/explorar.js"></script>
+        <script src="app/controllers/notificaciones.js"></script>
+        <script src="app/controllers/perfil.js"></script>
+        <script src="app/controllers/filtros.js"></script>
+        <!-- Routes -->
+        <script src="app/routes/login.js"></script>
+        <script src="app/routes/inicio.js"></script>
+        <script src="app/routes/registro.js"></script>
+        <script src="app/routes/tabs.js"></script>
+        <script src="app/routes/filtros.js"></script>
+    </head>
+
+    <body ng-app="lufke">
+        <!--
+          The nav bar that will be updated as we navigate between views.
+        -->
     <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
+        <ion-nav-back-button>
+        </ion-nav-back-button>
     </ion-nav-bar>
     <!--
       The views will be rendered in the <ion-nav-view> directive below
