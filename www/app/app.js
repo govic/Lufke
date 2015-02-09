@@ -2,6 +2,7 @@ angular.module('lufke', ['ionic', 'ngStorage'])
 		.config(function ($urlRouterProvider, $ionicConfigProvider) {
 			$urlRouterProvider.otherwise('/inicio');
 			$ionicConfigProvider.tabs.position('bottom');
+			$ionicConfigProvider.navBar.alignTitle('center');
 		})
 		.run(function ($ionicPlatform) {
 			$ionicPlatform.ready(function () {
