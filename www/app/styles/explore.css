@@ -1,18 +1,16 @@
-.titulo-seccion {
+.section-title {
     font-weight: 600;
 }
-.ver-todos {
+.viewall {
     text-align: right;
 }
-.img-perfil {
+.profile-img {
     border-radius: 100%;
     height: 60px;
     width: 60px;
 }
-.link-seguir {
-    background-color:rgba(255,0,0,0.5);
-}
-.content-publicacion {
+
+.post-content {
     margin-left: auto;
     margin-right: auto;
     height: 60px;
@@ -20,15 +18,15 @@
     background-size: 60px 60px;
     background-repeat: no-repeat;
 }
-.center-icon-publicacion {
+.post-icon-center {
     padding-top: 10px;
     vertical-align: middle;
     text-align: center;
 }
-.icon-publicacion {
+.post-icon {
     font-size: 35px;
 }
-.content-categoria {
+.category-content {
     margin-left: auto;
     margin-right: auto;
     height: 122px;
@@ -36,12 +34,12 @@
     background-size: 122px 122px;
     background-repeat: no-repeat;   
 }
-.nombre-categoria {
+.category-name {
     padding-top: 10px;
     vertical-align: middle;
     text-align: center;
     font-weight: bold;
 }
-.item-publicacion {
+.post-item {
     padding: 0px;
 }

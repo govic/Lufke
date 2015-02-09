@@ -1,19 +1,19 @@
-.filtros-color-gris {
+.filters-gray {
     color: #B5B5B5;
 }
-.filtros-align-right {
+.filters-align-right {
     text-align: right;
 }
-.filtros-align-center {
+.filters-align-center {
     text-align: center;
 }
-.filtros-color-links {
+.filters-color-links {
     color: #56BCC5;
 }
-.filtros-quita-padding {
+.filters-no-padding {
     padding: 0px;
 }
-.fitros-bordes-ranking {
+.fitros-ranking-borders {
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
@@ -23,16 +23,16 @@
     border-width: 1px;
     padding: 5px;
 }
-.filtros-font-size-intereses {
+.filters-font-interests-text {
     font-size: 110%;
 }
-.filtros-fix-padding-nombre {
+.filters-fix-padding-name {
     padding-left: 15px;
 }
-.filtros-fix-padding-prop {
+.filters-fix-padding-prop {
     padding-right: 5px;
 }
-.filtros-icon-size {
+.filters-icon-size {
     padding-left: 8px;
     font-size: 35px;
 }

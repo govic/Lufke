@@ -1,6 +1,6 @@
 angular.module('lufke', ['ionic', 'ngStorage'])
 		.config(function ($urlRouterProvider, $ionicConfigProvider) {
-			$urlRouterProvider.otherwise('/inicio');
+			$urlRouterProvider.otherwise('/start');
 			$ionicConfigProvider.tabs.position('bottom');
 			$ionicConfigProvider.navBar.alignTitle('center');
 		})

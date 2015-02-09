@@ -2,22 +2,22 @@ angular.module('lufke').controller('LoginCtrl', function ($scope, $state) {
 	console.log('Inicia ... LoginCtrl');
 
 	//precarga datos
-	$scope.usuario = {
-		correo: "",
+	$scope.user = {
+		email: "",
 		password: ""
 	};
 
 	$scope.loginError = false;
 
-	$scope.validaUsuario = function () {
+	$scope.validateUser = function () {
 
-		console.log('LoginCtrl ... validaUsuario');
+		console.log('LoginCtrl ... validateUser');
 
-		if ($scope.usuario.correo != "" && $scope.usuario.password != "") {
+		if ($scope.user.email != "" && $scope.user.password != "") {
 			$scope.loginError = false;
-			console.log('LoginCtrl ... validaUsuario ... OK');
-			console.log('LoginCtrl ... validaUsuario ... redirect');
-			$state.go('tab.noticias'); //redirige hacia noticias
+			console.log('LoginCtrl ... validateUser ... OK');
+			console.log('LoginCtrl ... validateUser ... redirect');
+			$state.go('tab.news'); //redirige hacia news
 			return;
 
 			//OJO! despues de hacer el redirect la ejecucion del metodo continua,

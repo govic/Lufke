@@ -1,16 +1,16 @@
-<ion-view view-title="Noticias">
+<ion-view view-title="News">
     <ion-nav-buttons side="left">
         <a class="button button-icon icon ion-search" href="#/buscar"></a>  
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
-        <a class="button button-icon icon ion-levels" href="#/filtros"></a>  
+        <a class="button button-icon icon ion-levels" href="#/filters"></a>  
     </ion-nav-buttons>
 
     <ion-content padding="true">
-        <ion-refresher pulling-text="Soltar para refrescar..." on-refresh="refrescarNoticias()">
+        <ion-refresher pulling-text="Soltar para refrescar..." on-refresh="refrescarNews()">
         </ion-refresher>
         <div class="list">
-            <lufke-publicacion ng-repeat="publicacion in publicaciones"></lufke-publicacion>
+            <lufke-post ng-repeat="post in posts"></lufke-post>
         </div>
     </ion-content>
 </ion-view>

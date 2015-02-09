@@ -6,39 +6,39 @@ angular.module('lufke')
 						abstract: true,
 						templateUrl: 'app/templates/tabs.html'
 					})
-					.state('tab.explorar', {
-						url: '/explorar',
+					.state('tab.explore', {
+						url: '/explore',
 						views: {
-							'tab-explorar': {
-								templateUrl: 'app/templates/explorar.html',
-								controller: 'ExplorarCtrl'
+							'tab-explore': {
+								templateUrl: 'app/templates/explore.html',
+								controller: 'ExploreCtrl'
 							}
 						}
 					})
-					.state('tab.noticias', {
-						url: '/noticias',
+					.state('tab.news', {
+						url: '/news',
 						views: {
-							'tab-noticias': {
-								templateUrl: 'app/templates/noticias.html',
-								controller: 'NoticiasCtrl'
+							'tab-news': {
+								templateUrl: 'app/templates/news.html',
+								controller: 'NewsCtrl'
 							}
 						}
 					})
-					.state('tab.notificaciones', {
-						url: '/notificaciones',
+					.state('tab.notifications', {
+						url: '/notifications',
 						views: {
-							'tab-notificaciones': {
-								templateUrl: 'app/templates/notificaciones.html',
-								controller: 'NotificacionesCtrl'
+							'tab-notifications': {
+								templateUrl: 'app/templates/notifications.html',
+								controller: 'NotificationsCtrl'
 							}
 						}
 					})
-					.state('tab.perfil', {
-						url: '/perfil',
+					.state('tab.profile', {
+						url: '/profile',
 						views: {
-							'tab-perfil': {
-								templateUrl: 'app/templates/perfil.html',
-								controller: 'PerfilCtrl'
+							'tab-profile': {
+								templateUrl: 'app/templates/profile.html',
+								controller: 'ProfileCtrl'
 							}
 						}
 					})

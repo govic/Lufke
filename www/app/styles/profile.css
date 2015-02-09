@@ -1,4 +1,4 @@
-.img-principal-perfil {
+.profile-main-img {
     border-radius: 100%;
     height: 70px;
     width: 70px;
@@ -7,28 +7,28 @@
     background-color: #F3CC5B;
     filter: blur(5px);
 }
-.texto-link-social-tag {
+.tag-social-link-text {
     color: #56BCC5;
 }
-.center-text-perfil {
+.profile-text-center {
     text-align: center;
 }
-.img-background-perfil {
+.profile-background-img {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.cantidad-perfil {
+.profile-number {
     text-shadow: 1px 0px #56BCC5;
     font-size: 120%;
 }
-.texto-bajo-cantidad-perfil {
+.profile-number-text-under {
     text-shadow: 1px 0px #56BCC5;
     font-size: 70%;
 }
-.texto-nombre-perfil {
+.profile-name-text {
     text-shadow: 1px 0px #56BCC5;
 }
-.boton-editar-perfil {
+.profile-button-edit {
     text-align: right;
     padding-right: 0px;
 }

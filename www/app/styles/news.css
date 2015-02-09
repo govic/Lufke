@@ -1,40 +1,39 @@
-
-.noticias-publicacion {
+.news-post {
     height: 15em;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
 }
 
-.noticias-publicacion-cuerpo {
+.news-post-body {
     height: 6em;
     font-size: 90%;
 }
 
-.noticias-publicacion-hora {
+.news-post-timestamp {
     text-align: right;
 }
 
-.noticias-publicacion-usuario-nombre {
+.news-post-user-name {
     font-size: 110%;
 }
 
-.noticias-publicacion-usuario-datos{
+.news-post-user-data{
 	padding-top: 0.5em;
 	text-align: left;
 }
 
-.noticias-publicacion-localizacion {
+.news-post-location {
     color: #EEE0BB;
     font-size: 90%;
 }
 
-.noticias-publicacion-usuario-imagen {
+.news-post-user-img {
     border-radius: 100%;
     height: 3.5em;
     width: 3.5em;
 }
 
-.noticias-publicacion-pie-mas{
+.news-post-more{
     text-align: right;
 }
