@@ -1,60 +1,18 @@
 angular.module('lufke')
-        .controller('NoticiasCtrl', function ($scope) {
+        .controller('NoticiasCtrl', function ($scope, $localStorage, PublicacionesService) {
             console.log('Inicia ... NoticiasCtrl');
+            $localStorage.$default({
+                    'numeroRefrescos': 0
+            });
+            
+            $scope.publicaciones = PublicacionesService.actualizar();
+            
+            console.log("Numero refrescos:" + $localStorage.numeroRefrescos);
 
-            var dummy =
-                    [{
-                            fondo: 'http://goo.gl/56Q265',
-                            perfil: {
-                                imagen: 'http://goo.gl/qBdA7s',
-                                nombre: 'Elber Galarga'
-                            },
-                            localizacion: 'Pichilemu',
-                            hora: '4h',
-                            texto: 'Hola mundo',
-                            estrellas: 2,
-                            comentarios: 5,
-                            enlace: ''
-                        },
-                        {
-                            fondo: 'http://goo.gl/56Q265',
-                            perfil: {
-                                imagen: 'http://goo.gl/qBdA7s',
-                                nombre: 'Elber Galarga'
-                            },
-                            localizacion: 'Pichilemu',
-                            hora: '4h',
-                            texto: 'Hola mundo',
-                            estrellas: 2,
-                            comentarios: 5,
-                            enlace: ''
-                        },
-                        {
-                            fondo: 'http://goo.gl/56Q265',
-                            perfil: {
-                                imagen: 'http://goo.gl/qBdA7s',
-                                nombre: 'Elber Galarga'
-                            },
-                            localizacion: 'Pichilemu',
-                            hora: '4h',
-                            texto: 'Hola mundo',
-                            estrellas: 2,
-                            comentarios: 5,
-                            enlace: ''
-                        },
-                        {
-                            fondo: 'http://goo.gl/56Q265',
-                            perfil: {
-                                imagen: 'http://goo.gl/qBdA7s',
-                                nombre: 'Elber Galarga'
-                            },
-                            localizacion: 'Pichilemu',
-                            hora: '4h',
-                            texto: 'Hola mundo',
-                            estrellas: 2,
-                            comentarios: 5,
-                            enlace: ''
-                        }];
+            $scope.refrescarNoticias = function () {
+                $localStorage.numeroRefrescos++;
+                $scope.publicaciones = PublicacionesService.actualizar();
+                $scope.$broadcast('scroll.refreshComplete');
 
-            $scope.publicaciones = dummy;
+            };
         });

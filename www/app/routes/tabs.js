@@ -6,11 +6,6 @@ angular.module('lufke')
                         abstract: true,
                         templateUrl: 'app/templates/tabs.html'
                     })
-                    .state('header', {
-                        url: '/header',
-                        abstract: true,
-                        templateUrl: 'app/templates/header.html'
-                    })
                     .state('tab.explorar', {
                         url: '/explorar',
                         views: {

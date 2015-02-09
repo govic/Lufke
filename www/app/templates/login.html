@@ -1,26 +1,23 @@
-<ion-pane>
-    <div class="bar bar-header">
-        <div class="h1 title">Login</div>
-    </div>
-
-    <form name="loginForm" novalidate ng-submit="loginForm.$valid && validaUsuario()" class="content has-header css-form">
-        <div class="list">
-            <label class="item item-input">
-                <input ng-model="usuario.correo" type="email" placeholder="Correo" required>
-                <span ng-show="loginError">(!)</span>
-            </label>
-            <label class="item item-input">
-                <input ng-model="usuario.password" type="password" placeholder="Contraseña" required>
-            </label>
-        </div>
-        <div class="card" ng-show="loginError">
-            <div class="item item-text-wrap assertive">
-                El correo o la contraseña ingresado no son válidos.
+<ion-view title="Login">
+    <ion-content>
+        <form name="loginForm" novalidate ng-submit="loginForm.$valid && validaUsuario()" class="content has-header css-form">
+            <div class="list">
+                <label class="item item-input">
+                    <input ng-model="usuario.correo" type="email" placeholder="Correo" required>
+                    <span ng-show="loginError">(!)</span>
+                </label>
+                <label class="item item-input">
+                    <input ng-model="usuario.password" type="password" placeholder="Contraseña" required>
+                </label>
             </div>
-        </div>
-        <div class="padding">
-            <input type="submit" class="button button-block button-positive" value="Iniciar sesión"></input>
-        </div>
-    </form>
-
-</ion-pane>
+            <div class="card" ng-show="loginError">
+                <div class="item item-text-wrap assertive">
+                    El correo o la contraseña ingresado no son válidos.
+                </div>
+            </div>
+            <div class="padding">
+                <input type="submit" class="button button-block button-positive" value="Iniciar sesión">
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
