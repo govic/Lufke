@@ -9,10 +9,10 @@ angular.module('lufke')
 
 			console.log("Numero refrescos:" + $localStorage.newsUpdateNumber);
 
-			$scope.refrescarNews = function () {
+			$scope.updateNews = function () {
 				$localStorage.newsUpdateNumber++;
-				$scope.posts = PostsService.actualizar();
 				$scope.$broadcast('scroll.refreshComplete');
-
+				var newPosts = PostsService.actualizar();
+				$scope.posts = newPosts;
 			};
 		});

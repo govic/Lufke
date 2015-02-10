@@ -7,7 +7,7 @@
     </ion-nav-buttons>
 
     <ion-content padding="true">
-        <ion-refresher pulling-text="Soltar para refrescar..." on-refresh="refrescarNews()">
+        <ion-refresher pulling-text="Soltar para refrescar" on-refresh="updateNews()">
         </ion-refresher>
         <div class="list">
             <lufke-post ng-repeat="post in posts"></lufke-post>
