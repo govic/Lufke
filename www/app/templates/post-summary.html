@@ -1,24 +1,24 @@
-<a class="item news-post" style="background-image: url('{{post.backgroundImgUrl}}');" href="{{post.link}}">
+<a class="item post-summary" style="background-image: url('{{post.backgroundImgUrl}}');" href="{{post.link}}">
     <div class="row row-top">
         <div class="col col-25">
-            <img class="news-post-user-img" ng-src="{{post.profile.image}}" alt="Foto de perfil"/>
+            <img class="post-summary-user-img" ng-src="{{post.profile.image}}" alt="Foto de perfil"/>
         </div>
 
-        <div class="col news-post-user-data">
-            <span class="news-post-user-name">{{post.profile.name}}<br/></span>
+        <div class="col post-summary-user-data">
+            <span class="post-summary-user-name">{{post.profile.name}}<br/></span>
 
-            <span ng-show="post.location !== ''" class="news-post-location">
+            <span ng-show="post.location !== ''" class="post-summary-location">
                 <i class="ion-location"></i> {{post.location}}
             </span>
         </div>
 
-        <div class="col news-post-timestamp">
+        <div class="col post-summary-timestamp">
             <i class="ion-clock"></i> <span>{{post.timestamp}}</span>                        
         </div>
     </div>
 
     <div class="row row-center">
-        <div class="col news-post-body"></div>
+        <div class="col post-summary-body"></div>
     </div>
 
     <div class="row row-bottom">
@@ -31,7 +31,7 @@
             <i class="ion-chatbox"></i> <span>{{post.comments}}</span>
         </div>
 
-        <div class="col news-post-more"><i class="ion-more"></i></div>
+        <div class="col post-summary-more"><i class="ion-more"></i></div>
     </div>
 </a>
 <br/>

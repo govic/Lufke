@@ -1,39 +1,39 @@
-.news-post {
+.post-summary {
     height: 15em;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
 }
 
-.news-post-body {
+.post-summary-body {
     height: 6em;
     font-size: 90%;
 }
 
-.news-post-timestamp {
+.post-summary-timestamp {
     text-align: right;
 }
 
-.news-post-user-name {
+.post-summary-user-name {
     font-size: 110%;
 }
 
-.news-post-user-data{
+.post-summary-user-data{
 	padding-top: 0.5em;
 	text-align: left;
 }
 
-.news-post-location {
+.post-summary-location {
     color: #EEE0BB;
     font-size: 90%;
 }
 
-.news-post-user-img {
+.post-summary-user-img {
     border-radius: 100%;
     height: 3.5em;
     width: 3.5em;
 }
 
-.news-post-more{
+.post-summary-more{
     text-align: right;
 }
