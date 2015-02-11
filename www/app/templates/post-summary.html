@@ -1,4 +1,4 @@
-<a class="item post-summary" style="background-image: url('{{post.backgroundImgUrl}}');" href="{{post.link}}">
+<a class="item post-summary" ng-style="{'background-image':'url({{post.backgroundImgUrl}})'}" href="#/post/{{post.postId}}">
     <div class="row row-top">
         <div class="col col-25">
             <img class="post-summary-user-img" ng-src="{{post.profile.image}}" alt="Foto de perfil"/>

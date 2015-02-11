@@ -1,4 +1,4 @@
-angular.module('lufke', ['ionic', 'ngStorage'])
+angular.module('lufke', ['ionic', 'ngStorage', 'ngLodash'])
 		.config(function ($urlRouterProvider, $ionicConfigProvider) {
 			$urlRouterProvider.otherwise('/start');
 			$ionicConfigProvider.tabs.position('bottom');
