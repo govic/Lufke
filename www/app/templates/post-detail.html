@@ -1,41 +1,54 @@
 <ion-view view-title="Publicación">
     <ion-content class="padding">
 
-		<div class="item post-summary" ng-style="{'background-image':'url({{post.backgroundImgUrl}})'}">
-			<div class="row row-top">
-				<div class="col col-25">
-					<img class="post-summary-user-img" ng-src="{{post.profile.image}}" alt="Foto de perfil"/>
-				</div>
+		<ion-refresher pulling-text="Soltar para refrescar" on-refresh="updatePost()">
+        </ion-refresher>
 
-				<div class="col post-summary-user-data">
-					<span class="post-summary-user-name">{{post.profile.name}}<br/></span>
+		<a href="#/">
+			<div id="post-detail-content-container" class="item" ng-style="{'background-image':'url({{post.backgroundImgUrl}})'}">
+			</div>
+		</a>
 
-					<span ng-show="post.location !== ''" class="post-summary-location">
-						<i class="ion-location"></i> {{post.location}}
-					</span>
-				</div>
-
-				<div class="col post-summary-timestamp">
-					<i class="ion-clock"></i> <span>{{post.timestamp}}</span>                        
-				</div>
+		<div class="row row-top">
+			<div id="post-detail-user-img-container">
+				<img id="post-detail-user-img" ng-src="{{post.profile.image}}" alt="Foto de perfil"/>
 			</div>
 
-			<div class="row row-center">
-				<div class="col post-summary-body"></div>
+			<div class="col post-detail-user-data">
+				<span id="post-detail-user-name">{{post.profile.name}}<br/></span>
+				<span ng-show="post.location !== ''" id="post-detail-location">
+					<i class="ion-location"></i> {{post.location}}<br/>
+				</span>
+				<span><i class="ion-clock"></i> {{post.timestamp}}</span>
 			</div>
 
-			<div class="row row-bottom">
-				<div class="col">{{post.text}}</div>
+
+		</div>
+
+		<div class="row row-bottom">
+			<div class="col">{{post.text}}</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<i class="ion-star"></i> <span>{{post.totalStars}}</span>
 			</div>
-
-			<div class="row row-bottom">
-				<div class="col">
-					<i class="ion-star"></i> <span>{{post.stars}}</span>
-					<i class="ion-chatbox"></i> <span>{{post.comments}}</span>
-				</div>
-
-				<div class="col post-summary-more"><i class="ion-more"></i></div>
+			<div class="col" id="post-detail-more" ng-click="showMore()">
+				<i class="ion-more"></i>
 			</div>
 		</div>
+
+		<ion-item ng-repeat="comment in post.comments" class="post-detail-comment-container" on-hold="showCommentOptions()">
+			<div class="row">
+				<div class="post-detail-comment-user-img-container">
+					<img class="post-detail-comment-user-img" ng-src="{{comment.profile.image}}"/>
+				</div>
+
+				<div class="col col-top">
+					<span class="post-detail-comment-user-name">{{comment.profile.name}}</span><br>
+					<span class="post-detail-comment-text">{{comment.text}}</span>
+				</div>
+			</div>
+		</ion-item>
 	</ion-content>
 </ion-view>

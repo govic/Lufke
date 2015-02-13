@@ -1,6 +1,6 @@
 <a class="item post-summary" ng-style="{'background-image':'url({{post.backgroundImgUrl}})'}" href="#/post/{{post.postId}}">
     <div class="row row-top">
-        <div class="col col-25">
+        <div class="post-summary-user-img-container">
             <img class="post-summary-user-img" ng-src="{{post.profile.image}}" alt="Foto de perfil"/>
         </div>
 
@@ -27,8 +27,8 @@
 
     <div class="row row-bottom">
         <div class="col">
-            <i class="ion-star"></i> <span>{{post.stars}}</span>
-            <i class="ion-chatbox"></i> <span>{{post.comments}}</span>
+            <i class="ion-star"></i> <span>{{post.totalStars}}</span>
+            <i class="ion-chatbox"></i> <span>{{post.totalComments}}</span>
         </div>
 
         <div class="col post-summary-more"><i class="ion-more"></i></div>
