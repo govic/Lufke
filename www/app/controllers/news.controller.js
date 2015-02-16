@@ -15,4 +15,9 @@ angular.module('lufke')
 				var newPosts = PostsService.getPosts();
 				$scope.posts = newPosts;
 			};
+			
+			$scope.shareExperience = function() {
+				alert($scope.experienceText);
+				$scope.experienceText = "";
+			};
 		});
