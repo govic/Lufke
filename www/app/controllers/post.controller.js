@@ -1,5 +1,5 @@
 angular.module('lufke')
-		.controller('PostCtrl', function ($scope, $stateParams, $ionicPopup, PostsService) {
+		.controller('PostCtrl', function ($scope, $stateParams, $ionicPopup, $ionicActionSheet, PostsService) {
 			console.log('Inicia ... PostCtrl');
 
 			$scope.post = PostsService.getPost($stateParams.postId);
@@ -10,34 +10,26 @@ angular.module('lufke')
 				//TODO: agregar comentarios nuevos o algo asi
 			};
 
-			var optionsPopup;
-
 			$scope.showMore = function () {
-				optionsPopup = $ionicPopup.show({
-					templateUrl: 'app/templates/post-more.html',
-					title: 'Acciones',
-					scope: $scope,
+				var options = $ionicActionSheet.show({
 					buttons: [
-						{
-							text: 'Cancelar'
-						}
-					]
+						{text: '<i class="ion-share"></i> <span>Compartir</span>'}, //Index = 0
+						{text: '<i class="ion-flag"></i> <span>Reportar</span>'} //Index = 1
+					],
+					destructiveText: '<i class="ion-trash-b"></i> <span>Borrar</span>',
+					cancelText: 'Cancelar',
+					cancel: function () {
+						alert("cancelar");
+					},
+					destructiveButtonClicked: function () {
+						alert("borrar");
+						return true; //Close the model?
+					},
+					buttonClicked: function (index) {
+						alert("presionado botón nro: " + index);
+						return true;
+					}
 				});
-
-				optionsPopup.then(function (res) {
-					console.log('Tapped!', res);
-				});
-			};
-
-			$scope.share = function () {
-				optionsPopup.close();
-				alert("share");
-
-			};
-
-			$scope.report = function () {
-				optionsPopup.close();
-				alert("report");
 			};
 
 			$scope.showCommentOptions = function () {

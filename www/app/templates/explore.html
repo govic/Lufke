@@ -1,53 +1,64 @@
-<ion-view title="Explorar">
-    <ion-content class="padding">
-        <div class="row section-title">
-            <div class="col">
-                USUARIOS POPULARES
-            </div>
-            <div class="col viewall">                
-                VER TODOS
-                <i class="ion-chevron-right"></i>
-            </div>
-        </div>
-        <div class="list">
-            <div class="item post-item" ng-repeat="item in topUsers" style="background-image: url('{{item.backgroundImgUrl}}');">
-                <div class="row">
-                    <div class="col">
-                        <a href="#/profile/{{item.profileId}}">
-                            <img ng-src="{{item.profileImgUrl}}" class="profile-img" />
-                        </a>
-                    </div>
-                    <div class="col">
-                        <h4 class="light">{{item.profileFirstName}}<br />{{item.profileLastName}}</h4>
-                        <button class="button button-light button-small">
-                            <i class="ion-plus active"></i> SEGUIR
-                        </button>
-                    </div>
-                    <div class="col" ng-repeat="pub in item.lastPosts">
-                        <div class="post-content post-icon-center" style="background-image: url('{{pub.postImgUrl}}');">
-                            <i class="{{pub.postType == 'FOTO' ? 'ion-camera' : 'ion-play'}} light post-icon"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row section-title">
-            <div class="col">
-                CATEGORíAS
-            </div>
-            <div class="col viewall">
-                VER TODAS
-                <i class="ion-chevron-right"></i>
-            </div>
-        </div>
-        <div class="row" ng-repeat="row in topCategories">
-            <div class="col" ng-repeat="category in row">
-                <div class="category-content" style="background-image: url('{{category.categoryImgUrl}}');">
-                    <div class="category-name light">
-                        {{category.categoryName}}
-                    </div>
-                </div>
-            </div>
-        </div>
+<ion-view view-title="Explorar">
+    <ion-content id="explore" class="padding">
+		<ion-list>
+			<ion-item class="item-divider">
+				<div class="row">
+					<div class="col">
+						Usuarios populares
+					</div>
+					<div class="col explore-view-all" ng-click="allTopUsers()">
+						Ver todos <i class="ion-chevron-right"></i>
+					</div>
+				</div>
+			</ion-item>
+
+			<ion-item ng-repeat="item in topUsers" style="background-image: url('{{item.backgroundImgUrl}}');">
+				<div class="row">
+					<div class="col" ng-click="goToProfile(item.profileId)">
+						<img ng-src="{{item.profileImgUrl}}" class="profile-img" />
+					</div>
+
+					<div class="col explore-font">
+						{{item.profileFirstName}}<br/>
+						{{item.profileLastName}}<br/>
+						<button class="button button-light button-small" ng-click="follow(item.profileId)">
+							<i class="ion-plus active"></i> Seguir
+						</button>
+					</div>
+
+					<div ng-repeat="pub in item.lastPosts"
+						 class="col post-content" 
+						 style="background-image: url('{{pub.postImgUrl}}');">
+						<i class="{{pub.postType == 'FOTO' ? 'ion-camera' : 'ion-play'}} light post-icon"></i>
+					</div>
+				</div>
+			</ion-item>
+		</ion-list>
+
+		<br/>
+
+        <ion-list>
+			<ion-item class="item-divider">
+				<div class="row">
+					<div class="col">
+						Categorías
+					</div>
+					<div class="col explore-view-all" ng-click="allCategories()">
+						Ver todas <i class="ion-chevron-right"></i>
+					</div>
+				</div>
+			</ion-item>
+
+			<ion-item>
+				<div class="row" ng-repeat="row in topCategories">
+					<div class="col padding light category-content" 
+						 style="background-image: url('{{category.categoryImgUrl}}');" 
+						 ng-repeat="category in row">
+						{{category.categoryName}}
+					</div>
+					&nbsp;
+				</div>
+			</ion-item>
+		</ion-list>
     </ion-content>
 </ion-view>

@@ -4,37 +4,33 @@ angular.module('lufke').controller('ExploreCtrl', function ($scope) {
 		topUsers: [
 			{
 				backgoundImgUrl: "http://goo.gl/LQQ0mn",
-				profileImgUrl: "http://goo.gl/VAA8eI",
+				profileImgUrl: "http://goo.gl/PXFWyj",
 				profileId: "1",
-				profileFirstName: "RYAN",
-				profileLastName: "SHECKLER",
+				profileFirstName: "Elsa",
+				profileLastName: "Popeludo",
+				profileBackgroundImgUrl: "http://goo.gl/virQ16",
 				lastPosts: [
 					{
 						postType: "FOTO",
-						postImgUrl: "http://goo.gl/VAA8eI"
+						postImgUrl: "http://goo.gl/RlE1ZP"
 					}, {
 						postType: "VIDEO",
-						postImgUrl: "http://goo.gl/VAA8eI"
-					}, {
-						postType: "FOTO",
-						postImgUrl: "http://goo.gl/VAA8eI"
+						postImgUrl: "http://goo.gl/RlE1ZP"
 					}
 				]
 			}, {
 				backgoundImgUrl: "http://goo.gl/LQQ0mn",
 				profileImgUrl: "http://goo.gl/T4xQbr",
 				profileId: "2",
-				profileFirstName: "BEAR",
-				name_profile_2: "GRYLLS",
+				profileFirstName: "Bear",
+				profileLastName: "Grylls",
+				profileBackgroundImgUrl: "http://goo.gl/virQ16",
 				lastPosts: [
 					{
 						postType: "FOTO",
 						postImgUrl: "http://goo.gl/T4xQbr"
 					}, {
 						postType: "VIDEO",
-						postImgUrl: "http://goo.gl/T4xQbr"
-					}, {
-						postType: "FOTO",
 						postImgUrl: "http://goo.gl/T4xQbr"
 					}
 				]
@@ -42,17 +38,15 @@ angular.module('lufke').controller('ExploreCtrl', function ($scope) {
 				backgoundImgUrl: "http://goo.gl/LQQ0mn",
 				profileImgUrl: "http://goo.gl/bSTTK8",
 				profileId: "3",
-				profileFirstName: "FELIPE",
-				name_profile_2: "TOLEDO",
+				profileFirstName: "Felipe",
+				profileLastName: "Toledo",
+				profileBackgroundImgUrl: "http://goo.gl/virQ16",
 				lastPosts: [
 					{
 						postType: "FOTO",
 						postImgUrl: "http://goo.gl/bSTTK8"
 					}, {
 						postType: "VIDEO",
-						postImgUrl: "http://goo.gl/bSTTK8"
-					}, {
-						postType: "FOTO",
 						postImgUrl: "http://goo.gl/bSTTK8"
 					}
 				]
@@ -61,68 +55,68 @@ angular.module('lufke').controller('ExploreCtrl', function ($scope) {
 		topCategories: [
 			[
 				{
-					categoryName: "SKIING",
+					categoryName: "Skiing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "HIKING",
+					categoryName: "Hiking",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "SURFING",
+					categoryName: "Surfing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}
 			], [
 				{
-					categoryName: "SKIING",
+					categoryName: "Skiing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "HIKING",
+					categoryName: "Hiking",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "SURFING",
+					categoryName: "Surfing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}
 			], [
 				{
-					categoryName: "SKIING",
+					categoryName: "Skiing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "HIKING",
+					categoryName: "Hiking",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "SURFING",
+					categoryName: "Surfing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}
 			], [
 				{
-					categoryName: "SKIING",
+					categoryName: "Skiing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "HIKING",
+					categoryName: "Hiking",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "SURFING",
+					categoryName: "Surfing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}
 			], [
 				{
-					categoryName: "SKIING",
+					categoryName: "Skiing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "HIKING",
+					categoryName: "Hiking",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "SURFING",
+					categoryName: "Surfing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}
 			], [
 				{
-					categoryName: "SKIING",
+					categoryName: "Skiing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "HIKING",
+					categoryName: "Hiking",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}, {
-					categoryName: "SURFING",
+					categoryName: "Surfing",
 					categoryImgUrl: "http://goo.gl/dwmkfM"
 				}
 			]
@@ -132,5 +126,21 @@ angular.module('lufke').controller('ExploreCtrl', function ($scope) {
 
 	$scope.topUsers = datos.topUsers;
 	$scope.topCategories = datos.topCategories;
+
+	$scope.allCategories = function () {
+		alert('All Categories');
+	};
+	
+	$scope.follow = function (profileId) {
+		alert('Follow: ' + profileId);
+	};
+	
+	$scope.goToProfile = function (profileId) {
+		alert('Go to: ' + profileId);
+	};
+
+	$scope.allTopUsers = function () {
+		alert('All Top Users');
+	};
 
 });

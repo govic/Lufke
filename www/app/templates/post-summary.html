@@ -17,21 +17,15 @@
         </div>
     </div>
 
-    <div class="row row-center">
-        <div class="col post-summary-body"></div>
+    <div class="row row-baseline">
+        <div class="col post-summary-body-text">{{post.text}}</div>
     </div>
 
     <div class="row row-bottom">
-        <div class="col">{{post.text}}</div>
-    </div>
-
-    <div class="row row-bottom">
-        <div class="col">
+        <div class="col post-summary-footer">
             <i class="ion-star"></i> <span>{{post.totalStars}}</span>
             <i class="ion-chatbox"></i> <span>{{post.totalComments}}</span>
         </div>
-
-        <div class="col post-summary-more"><i class="ion-more"></i></div>
     </div>
 </a>
 <br/>

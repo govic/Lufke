@@ -1,3 +1,10 @@
+#login-forgot-password{
+	padding-top: 0.5em;
+	text-align: center;
+	font-size: 85%;
+	color: #666666;
+}
+
 .css-form input.ng-invalid.ng-touched {
     color: #FA787E;
 }

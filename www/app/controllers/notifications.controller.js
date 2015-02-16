@@ -3,7 +3,7 @@ angular.module('lufke').controller('NotificationsCtrl', function ($scope) {
 	var datos = {
 		requests: {
 			totalRequests: 21,
-			titleText: "SOLICITUDES DE SEGUIMIENTO",
+			titleText: "solicitudes de seguimiento",
 			totalMore: 18,
 			requestsList: [
 				{

@@ -1,17 +1,26 @@
 .post-summary {
-    height: 15em;
+    height: 14em;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
 }
 
-.post-summary-body {
-    height: 6em;
+.post-summary-body-text {
+    padding-top: 6.8em;
+	height: 1.5em;
     font-size: 90%;
 }
 
+.post-summary-footer {
+    padding-top: 0.5em;
+	height: 1.5em;
+    font-size: 85%;
+	color: #666666;
+}
+
 .post-summary-timestamp {
-    text-align: right;
+    padding-top: 0.7em;
+	text-align: right;
 }
 
 .post-summary-user-name {
@@ -19,7 +28,7 @@
 }
 
 .post-summary-user-data{
-	padding-top: 1em;
+	padding-top: 0.7em;
 	text-align: left;
 }
 
@@ -36,8 +45,4 @@
 
 .post-summary-user-img-container {
     padding: 0.3em;
-}
-
-.post-summary-more{
-    text-align: right;
 }
