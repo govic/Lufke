@@ -1,5 +1,5 @@
 angular.module('lufke')
-		.controller('RegisterCtrl', function ($scope) {
-			console.log('Inicia ... RegisterCtrl');
+		.controller('RegisterController', function ($scope) {
+			console.log('Inicia ... RegisterController');
 			$scope.data = 'DATOS DE PRUEBA CONTROLADOR REGISTRO';
 		});

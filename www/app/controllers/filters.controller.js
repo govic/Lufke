@@ -1,5 +1,5 @@
-angular.module('lufke').controller('FiltersCtrl', function ($scope) {
-	console.log('Inicia ... FiltersCtrl');
+angular.module('lufke').controller('FiltersController', function ($scope) {
+	console.log('Inicia ... FiltersController');
 	var data = {
 		interests: [
 			{

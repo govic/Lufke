@@ -35,6 +35,15 @@
     text-align: right;
 }
 
+#postDetail #commentTextContainer {
+	padding: 0.1em 0 0 0.5em;
+}
+
+#commentTextArea{
+	resize: none;
+	font-size: 75%;
+}
+
 //Comments
 .post-detail-comment-user-img {
     border-radius: 100%;

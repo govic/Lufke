@@ -1,5 +1,5 @@
-angular.module('lufke').controller('NotificationsCtrl', function ($scope) {
-	console.log('Inicia ... NotificationsCtrl');
+angular.module('lufke').controller('NotificationsController', function ($scope) {
+	console.log('Inicia ... NotificationsController');
 	var datos = {
 		requests: {
 			totalRequests: 21,

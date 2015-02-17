@@ -1,5 +1,5 @@
-angular.module('lufke').controller('LoginCtrl', function ($scope, $state, $ionicPopup) {
-	console.log('Inicia ... LoginCtrl');
+angular.module('lufke').controller('LoginController', function ($scope, $state, $ionicPopup) {
+	console.log('Inicia ... LoginController');
 
 	//precarga datos
 	$scope.user = {
@@ -11,9 +11,14 @@ angular.module('lufke').controller('LoginCtrl', function ($scope, $state, $ionic
 
 	$scope.showRememberPassword = function () {
 		$scope.rememberData = {};
+		$scope.emailError = false;
 
 		var popupRemember = $ionicPopup.show({
-			template: '<input ng-model="rememberData.email" placeholder="correo@ejemplo.com">',
+			template: '	<input ng-model="rememberData.email" placeholder="correo@ejemplo.com" required>\n\
+						<div class="padding assertive" ng-show="emailError">\n\
+						<i class="icon ion-alert-circled"></i>\n\
+						Ingrese un correo electrónico correcto\n\
+						</div>',
 			title: 'Ingrese su correo electrónico',
 			scope: $scope,
 			buttons: [
@@ -21,11 +26,13 @@ angular.module('lufke').controller('LoginCtrl', function ($scope, $state, $ionic
 				{
 					text: '<b>Enviar</b>',
 					type: 'button-positive',
+					attr: 'data-ng-disabled="!rememberData.email"',
 					onTap: function (e) {
 						var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 						if (!$scope.rememberData.email || !emailRegex.test($scope.rememberData.email))
 						{
+							$scope.emailError = true;
 							e.preventDefault();
 						}
 						else {
@@ -47,7 +54,7 @@ angular.module('lufke').controller('LoginCtrl', function ($scope, $state, $ionic
 
 	$scope.validateUser = function () {
 
-		console.log('LoginCtrl ... validateUser');
+		console.log('LoginController ... validateUser');
 
 		if ($scope.user.email !== "" && $scope.user.password !== "") {
 			$scope.loginError = false;

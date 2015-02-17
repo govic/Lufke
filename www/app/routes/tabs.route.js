@@ -11,7 +11,7 @@ angular.module('lufke')
 						views: {
 							'tab-explore': {
 								templateUrl: 'app/templates/explore.html',
-								controller: 'ExploreCtrl'
+								controller: 'ExploreController'
 							}
 						}
 					})
@@ -20,7 +20,7 @@ angular.module('lufke')
 						views: {
 							'tab-news': {
 								templateUrl: 'app/templates/news.html',
-								controller: 'NewsCtrl'
+								controller: 'NewsController'
 							}
 						}
 					})
@@ -29,7 +29,7 @@ angular.module('lufke')
 						views: {
 							'tab-notifications': {
 								templateUrl: 'app/templates/notifications.html',
-								controller: 'NotificationsCtrl'
+								controller: 'NotificationsController'
 							}
 						}
 					})
@@ -38,7 +38,7 @@ angular.module('lufke')
 						views: {
 							'tab-profile': {
 								templateUrl: 'app/templates/profile.html',
-								controller: 'ProfileCtrl'
+								controller: 'ProfileController'
 							}
 						}
 					})

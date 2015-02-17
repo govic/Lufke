@@ -1,5 +1,5 @@
-angular.module('lufke').controller('ProfileCtrl', function ($scope) {
-	console.log('Inicia ... ProfileCtrl');
+angular.module('lufke').controller('ProfileController', function ($scope) {
+	console.log('Inicia ... ProfileController');
 
 	var data = {
 		backgroundImgUrl: "http://goo.gl/WgH5Ju",

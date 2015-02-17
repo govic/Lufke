@@ -1,6 +1,6 @@
 angular.module('lufke')
-		.controller('NewsCtrl', function ($scope, $localStorage, PostsService) {
-			console.log('Inicia ... NewsCtrl');
+		.controller('NewsController', function ($scope, $localStorage, PostsService) {
+			console.log('Inicia ... NewsController');
 			$localStorage.$default({
 				'newsUpdateNumber': 0
 			});
@@ -16,8 +16,7 @@ angular.module('lufke')
 				$scope.posts = newPosts;
 			};
 			
-			$scope.shareExperience = function() {
-				alert($scope.experienceText);
-				$scope.experienceText = "";
+			$scope.shareExperience = function(text) {
+				alert(text);
 			};
 		});

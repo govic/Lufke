@@ -4,6 +4,6 @@ angular.module('lufke')
 					.state('register', {
 						url: '/register',
 						templateUrl: 'app/templates/register.html',
-						controller: 'RegisterCtrl'
+						controller: 'RegisterController'
 					});
 		});

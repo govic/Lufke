@@ -6,9 +6,20 @@
         <a class="button button-icon icon ion-levels" href="#/filters"></a>  
     </ion-nav-buttons>
 
-	<ion-header-bar class="bar bar-subheader item-input-inset">
-		<textarea id="experienceText" ng-model="experienceText" placeholder="Comparte tu experiencia..."></textarea>
-        <button ng-show="experienceText.length" class="button button-positive ion-edit" ng-click="shareExperience()"></button>
+	<ion-header-bar id="shareExperienceContainer" class="bar bar-subheader item-input-inset">
+		<textarea id="experienceTextArea" 
+				  ng-model="experienceText" 
+				  ng-blur="isExperienceTextFocus = false" 
+				  ng-focus="isExperienceTextFocus = true" 
+				  placeholder="Comparte tu experiencia...">
+		</textarea>
+		<div class="padding">
+			<button ng-show="isExperienceTextFocus || experienceText.length" 
+					ng-disabled="!experienceText.length" 
+					class="button button-positive ion-edit" 
+					ng-click="shareExperience(experienceText)">
+			</button>
+		</div>
 	</ion-header-bar>
 
     <ion-content padding="true">

@@ -1,13 +1,21 @@
 angular.module('lufke')
-		.controller('PostCtrl', function ($scope, $stateParams, $ionicPopup, $ionicActionSheet, PostsService) {
-			console.log('Inicia ... PostCtrl');
+		.controller('PostController', function ($scope, $stateParams, $ionicPopup, $ionicActionSheet, PostsService) {
+			console.log('Inicia ... PostController');
 
 			$scope.post = PostsService.getPost($stateParams.postId);
+			$scope.data = {};
 
 			$scope.updatePost = function () {
 				$scope.$broadcast('scroll.refreshComplete');
 				$scope.post = PostsService.getPost($stateParams.postId);
 				//TODO: agregar comentarios nuevos o algo asi
+			};
+
+			$scope.addComment = function () {
+				alert($scope.data.commentText);
+				PostsService.addComment($stateParams.postId, $scope.data.commentText);
+				
+				$scope.data.commentText = "";
 			};
 
 			$scope.showMore = function () {
@@ -32,30 +40,19 @@ angular.module('lufke')
 				});
 			};
 
-			$scope.showCommentOptions = function () {
+			$scope.showDeleteComment = function (commentId) {
 				var confirmPopup = $ionicPopup.confirm({
 					title: 'Borrar comentario',
 					template: '¿Está seguro que desea borrar este comentario?',
-					buttons: [{
-							text: 'No',
-							type: 'button-default',
-							onTap: function (e) {
-								// e.preventDefault() will stop the popup from closing when tapped.
-							}
-						}, {
-							text: 'Sí',
-							type: 'button-positive',
-							onTap: function (e) {
-								// Returning a value will cause the promise to resolve with the given value.
-								//return scope.data.response;
-							}
-						}]
+					cancelText: 'No',
+					okText: 'Sí',
 				});
 				confirmPopup.then(function (res) {
+					console.log('res: ' + res);
+
 					if (res) {
-						console.log('You are sure');
-					} else {
-						console.log('You are not sure');
+						PostsService.deleteComment($stateParams.postId, commentId);
+						$scope.updatePost();
 					}
 				});
 			};

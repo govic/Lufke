@@ -4,6 +4,6 @@ angular.module('lufke')
 					.state('filters', {
 						url: '/filters',
 						templateUrl: 'app/templates/filters.html',
-						controller: 'FiltersCtrl'
+						controller: 'FiltersController'
 					});
 		});

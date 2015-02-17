@@ -1,5 +1,5 @@
-angular.module('lufke').controller('ExploreCtrl', function ($scope) {
-	console.log('Inicia...ExploreCtrl ');
+angular.module('lufke').controller('ExploreController', function ($scope) {
+	console.log('Inicia...ExploreController ');
 	var datos = {
 		topUsers: [
 			{

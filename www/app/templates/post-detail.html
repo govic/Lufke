@@ -1,4 +1,4 @@
-<ion-view view-title="Publicación">
+<ion-view id="postDetail" view-title="Publicación">
     <ion-content class="padding">
 
 		<ion-refresher pulling-text="Soltar para refrescar" on-refresh="updatePost()">
@@ -33,22 +33,37 @@
 			<div class="col">
 				<i class="ion-star"></i> <span>{{post.totalStars}}</span>
 			</div>
-			<div class="col" id="post-detail-more" ng-click="showMore()">
-				<i class="ion-more"></i>
-			</div>
 		</div>
 
-		<ion-item ng-repeat="comment in post.comments" class="post-detail-comment-container" on-hold="showCommentOptions()">
-			<div class="row">
-				<div class="post-detail-comment-user-img-container">
-					<img class="post-detail-comment-user-img" ng-src="{{comment.profile.image}}"/>
+		<ion-list>
+			<ion-item id="commentTextContainer" class="item-input-inset">
+				<textarea id="commentTextArea"
+						  ng-model="data.commentText"
+						  ng-blur="isCommentTextFocus=false" 
+						  ng-focus="isCommentTextFocus=true" 
+						  placeholder="Agrega un comentario...">
+				</textarea>
+				<div class="padding">
+					<button ng-show="isCommentTextFocus || data.commentText.length"
+							ng-disabled="!data.commentText.length" 
+							class="button button-positive button-small ion-edit" 
+							ng-click="addComment()">
+					</button>
 				</div>
+			</ion-item>
 
-				<div class="col col-top">
-					<span class="post-detail-comment-user-name">{{comment.profile.name}}</span><br>
-					<span class="post-detail-comment-text">{{comment.text}}</span>
+			<ion-item ng-repeat="comment in post.comments" class="post-detail-comment-container" on-hold="showDeleteComment(post.postId, comment.commentId)">
+				<div class="row">
+					<div class="post-detail-comment-user-img-container">
+						<img class="post-detail-comment-user-img" ng-src="{{comment.profile.image}}"/>
+					</div>
+
+					<div class="col col-top">
+						<span class="post-detail-comment-user-name">{{comment.profile.name}}</span><br>
+						<span class="post-detail-comment-text">{{comment.text}}</span>
+					</div>
 				</div>
-			</div>
-		</ion-item>
+			</ion-item>
+		</ion-list>
 	</ion-content>
 </ion-view>

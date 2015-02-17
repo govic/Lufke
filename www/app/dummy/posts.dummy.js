@@ -107,7 +107,7 @@ var dummyPostDetail = [
 					"name": "Mullins Dominguez",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "0m",
+				"timestamp": "0m",
 				"text": "Enim incididunt veniam dolore officia laboris nostrud."
 			},
 			{
@@ -116,7 +116,7 @@ var dummyPostDetail = [
 					"name": "Estes Frazier",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "1m",
+				"timestamp": "1m",
 				"text": "Ex ut aliqua ullamco sint."
 			},
 			{
@@ -125,7 +125,7 @@ var dummyPostDetail = [
 					"name": "Dean Ward",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "2m",
+				"timestamp": "2m",
 				"text": "Eu ipsum veniam officia non deserunt est dolore Lorem labore."
 			}
 		]
@@ -150,7 +150,7 @@ var dummyPostDetail = [
 					"name": "Emma Clarke",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "0m",
+				"timestamp": "0m",
 				"text": "Magna cupidatat ea anim mollit."
 			},
 			{
@@ -159,7 +159,7 @@ var dummyPostDetail = [
 					"name": "Saunders Rasmussen",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "1m",
+				"timestamp": "1m",
 				"text": "Ea id excepteur aliqua mollit occaecat occaecat non esse."
 			},
 			{
@@ -168,7 +168,7 @@ var dummyPostDetail = [
 					"name": "Langley Ruiz",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "2m",
+				"timestamp": "2m",
 				"text": "Occaecat consectetur ullamco aliqua non nisi pariatur voluptate Lorem et labore."
 			},
 			{
@@ -177,7 +177,7 @@ var dummyPostDetail = [
 					"name": "Hunter Hewitt",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "3m",
+				"timestamp": "3m",
 				"text": "Cillum et deserunt aliquip nisi sint magna ipsum commodo mollit."
 			},
 			{
@@ -186,7 +186,7 @@ var dummyPostDetail = [
 					"name": "Pate Hughes",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "4m",
+				"timestamp": "4m",
 				"text": "Non proident officia eiusmod esse culpa Lorem eu nulla."
 			}
 		]
@@ -211,7 +211,7 @@ var dummyPostDetail = [
 					"name": "Katheryn Delaney",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "0m",
+				"timestamp": "0m",
 				"text": "Exercitation anim fugiat et aute magna quis ut occaecat laborum laboris consequat."
 			},
 			{
@@ -220,7 +220,7 @@ var dummyPostDetail = [
 					"name": "Albert Mccall",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "1m",
+				"timestamp": "1m",
 				"text": "Fugiat irure reprehenderit exercitation sit in."
 			}
 		]
@@ -245,7 +245,7 @@ var dummyPostDetail = [
 					"name": "Rutledge Hess",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "0m",
+				"timestamp": "0m",
 				"text": "Eu excepteur fugiat eiusmod cillum mollit id amet veniam consectetur."
 			},
 			{
@@ -254,7 +254,7 @@ var dummyPostDetail = [
 					"name": "Matthews Paul",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "1m",
+				"timestamp": "1m",
 				"text": "Id anim proident incididunt veniam consequat elit in."
 			},
 			{
@@ -263,7 +263,7 @@ var dummyPostDetail = [
 					"name": "Malinda Stephenson",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "2m",
+				"timestamp": "2m",
 				"text": "Aute do ad sint reprehenderit ex amet minim."
 			},
 			{
@@ -272,7 +272,7 @@ var dummyPostDetail = [
 					"name": "Mason Dotson",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "3m",
+				"timestamp": "3m",
 				"text": "Cupidatat cillum nisi fugiat et deserunt duis irure anim quis veniam labore reprehenderit voluptate."
 			},
 			{
@@ -281,7 +281,7 @@ var dummyPostDetail = [
 					"name": "Smith Kennedy",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "4m",
+				"timestamp": "4m",
 				"text": "Aliqua nisi in sunt aute voluptate ipsum eu occaecat et ipsum reprehenderit fugiat magna."
 			}
 		]
@@ -307,7 +307,7 @@ var dummyPostDetail = [
 							"name": "Edwards Wade",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestramp": "0m",
+						"timestamp": "0m",
 						"text": "Fugiat cillum nulla incididunt deserunt non reprehenderit duis. Fugiat cillum nulla incididunt deserunt non reprehenderit duis. Fugiat cillum nulla incididunt deserunt non reprehenderit duis. Fugiat cillum nulla incididunt deserunt non reprehenderit duis."
 					},
 					{
@@ -316,7 +316,7 @@ var dummyPostDetail = [
 							"name": "Mari Foley",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestramp": "1m",
+						"timestamp": "1m",
 						"text": "Deserunt enim nulla amet consectetur veniam esse anim pariatur do ipsum."
 					},
 					{
@@ -325,7 +325,7 @@ var dummyPostDetail = [
 							"name": "Moore Fowler",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestramp": "2m",
+						"timestamp": "2m",
 						"text": "Sit aute duis consequat ullamco dolor aliquip ex."
 					},
 					{
@@ -334,7 +334,7 @@ var dummyPostDetail = [
 							"name": "Acevedo Lamb",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestramp": "3m",
+						"timestamp": "3m",
 						"text": "Excepteur tempor adipisicing non pariatur ullamco laborum proident nulla laboris velit qui."
 					},
 					{
@@ -343,7 +343,7 @@ var dummyPostDetail = [
 							"name": "Osborn Leblanc",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestramp": "4m",
+						"timestamp": "4m",
 						"text": "Exercitation esse proident eu deserunt commodo commodo elit aliquip esse aliqua incididunt."
 					}
 				]
@@ -368,7 +368,7 @@ var dummyPostDetail = [
 					"name": "Marva Hensley",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "0m",
+				"timestamp": "0m",
 				"text": "Occaecat qui fugiat qui mollit nisi sit culpa ea non."
 			},
 			{
@@ -377,7 +377,7 @@ var dummyPostDetail = [
 					"name": "Alta Duke",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestramp": "1m",
+				"timestamp": "1m",
 				"text": "Cupidatat officia consectetur fugiat reprehenderit aliquip exercitation mollit amet ullamco dolor ipsum."
 			}
 		]
