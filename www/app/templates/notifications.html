@@ -5,7 +5,7 @@
 				Solicitudes de Seguimiento
             </ion-item>
 
-            <ion-item ng-repeat="item in requests.requestsList">
+            <ion-item ng-repeat="item in model.requests.requestsList">
                 <div class="row">
                     <div class="col notification-profile-img-center">
                         <img ng-src="{{item.profileImgUrl}}" class="notification-profile-request-img" />
@@ -26,11 +26,11 @@
                 </ion-option-button>
             </ion-item>
 
-            <ion-item ng-show="!requests.requestsList.length">
+            <ion-item ng-show="!model.requests.requestsList.length">
                 No tiene solicitudes para mostrar
             </ion-item>
 
-            <ion-item class="item-divider" ng-show="requests.requestsList.length > 0" ng-click="viewRequests()">
+            <ion-item class="item-divider" ng-show="model.requests.requestsList.length > 0" ng-click="viewRequests()">
 				Ver {{requests.totalMore}} más <i class="ion-chevron-down"></i>
             </ion-item>
         </ion-list>
@@ -42,7 +42,7 @@
                 Notificaciones
             </ion-item>
 
-            <ion-item ng-repeat="item in notifications.notificationsList">
+            <ion-item ng-repeat="item in model.notifications.notificationsList">
                 <div class="row">
                     <div class="col notification-profile-img-center">
                         <img ng-src="{{item.profileImgUrl}}" class="notification-profile-img" />
@@ -62,11 +62,11 @@
                 </div>
             </ion-item>
 
-            <ion-item ng-show="!notifications.notificationsList.length">
+            <ion-item ng-show="!model.notifications.notificationsList.length">
                 No tiene notificaciones para motrar
             </ion-item>
 
-            <ion-item class="item-divider" ng-show="notifications.notificationsList.length" ng-click="viewNotifications()">
+            <ion-item class="item-divider" ng-show="model.notifications.notificationsList.length" ng-click="viewNotifications()">
 				Ver más <i class="ion-chevron-down"></i>
             </ion-item>
         </ion-list>

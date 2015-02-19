@@ -2,20 +2,22 @@ angular.module('lufke')
 		.controller('PostController', function ($scope, $stateParams, $ionicPopup, $ionicActionSheet, PostsService) {
 			console.log('Inicia ... PostController');
 
-			$scope.post = PostsService.getPost($stateParams.postId);
-			$scope.data = {};
+			$scope.model = {
+				post: PostsService.getPost($stateParams.postId),
+				commentText: ""
+			};
 
 			$scope.updatePost = function () {
 				$scope.$broadcast('scroll.refreshComplete');
-				$scope.post = PostsService.getPost($stateParams.postId);
+				$scope.model.post = PostsService.getPost($stateParams.postId);
 				//TODO: agregar comentarios nuevos o algo asi
 			};
 
 			$scope.addComment = function () {
-				alert($scope.data.commentText);
-				PostsService.addComment($stateParams.postId, $scope.data.commentText);
+				alert($scope.model.commentText);
+				PostsService.addComment($stateParams.postId, $scope.model.commentText);
 				
-				$scope.data.commentText = "";
+				$scope.model.commentText = "";
 			};
 
 			$scope.showMore = function () {

@@ -13,7 +13,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item" ng-repeat="item in filters.interests">
+                    <div class="item" ng-repeat="item in model.interests">
                         <div class="row filters-no-padding filters-font-interests-text">
                             <div class="col col-10 filters-color-links filters-no-padding">
                                 <span class="fitros-ranking-borders">
@@ -33,26 +33,26 @@
                     </div>
                     <div class="item range range-energized">
                         <i class="ion-camera filters-icon-size"></i>
-                        <input type="range" ng-model="filters.proportions.percentagePhotos" min="0" max="100">
-                        <span class="filters-gray filters-font-interests-text filters-fix-padding-prop">{{filters.proportions.percentagePhotos}}%</span>
+                        <input type="range" ng-model="model.proportions.percentagePhotos" min="0" max="100">
+                        <span class="filters-gray filters-font-interests-text filters-fix-padding-prop">{{model.proportions.percentagePhotos}}%</span>
                     </div>
                     <div class="item range range-assertive">
                         <i class="ion-play filters-icon-size"></i>
-                        <input type="range" ng-model="filters.proportions.percentageVideos" min="0" max="100">
-                        <span class="filters-gray filters-font-interests-text filters-fix-padding-prop">{{filters.proportions.percentageVideos}}%</span>
+                        <input type="range" ng-model="model.proportions.percentageVideos" min="0" max="100">
+                        <span class="filters-gray filters-font-interests-text filters-fix-padding-prop">{{model.proportions.percentageVideos}}%</span>
                     </div>
                     <div class="item range range-calm">
                         <i class="ion-link filters-icon-size"></i>
-                        <input type="range" ng-model="filters.proportions.percentageLinks" min="0" max="100">
-                        <span class="filters-gray filters-font-interests-text filters-fix-padding-prop">{{filters.proportions.percentageLinks}}%</span>
+                        <input type="range" ng-model="model.proportions.percentageLinks" min="0" max="100">
+                        <span class="filters-gray filters-font-interests-text filters-fix-padding-prop">{{model.proportions.percentageLinks}}%</span>
                     </div>
                     <div class="item filters-gray">
                         DISTANCIA
                     </div>
                     <div class="item range range-calm">
                         <i class="ion-link filters-icon-size"></i>
-                        <input type="range" ng-model="filters.distance" min="0" max="1000">
-                        <span class="filters-gray filters-font-interests-text filters-fix-padding-prop">{{filters.distance}} {{filters.distanceUnit}}</span>
+                        <input type="range" ng-model="model.distance" min="0" max="1000">
+                        <span class="filters-gray filters-font-interests-text filters-fix-padding-prop">{{model.distance}} {{model.distanceUnit}}</span>
                     </div>
                 </div>
             </div>

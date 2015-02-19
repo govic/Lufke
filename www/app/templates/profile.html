@@ -1,35 +1,35 @@
 <ion-view view-title="Perfil">
     <ion-content class="padding">
         <style type="text/css">{{style_before}}</style>
-        <div class="row profile-background-img" ng-style="{'background-image': 'url(' + profile.backgroundImgUrl + ')'}">
+        <div class="row profile-background-img" ng-style="{'background-image': 'url(' + model.backgroundImgUrl + ')'}">
             <div class="col">
                 <div class="row">
                     <div class="col">
-                        <img ng-src="{{profile.profileImgUrl}}" class="profile-main-img" />
+                        <img ng-src="{{model.profileImgUrl}}" class="profile-main-img" />
                     </div>
                     <div class="col col-75">
                         <div class="row light">
                             <div class="col">
-                                <div class="profile-name-text">{{profile.profileFirstName}}</div>
-                                <div class="profile-name-text">{{profile.profileLastName}}</div>
+                                <div class="profile-name-text">{{model.profileFirstName}}</div>
+                                <div class="profile-name-text">{{model.profileLastName}}</div>
                             </div>
                             <div class="col profile-button-edit">
-                                <a class="button button-light button-small" ng-click="editProfile(profile)">
+                                <a class="button button-light button-small" ng-click="editProfile(model)">
                                     Editar perfil
                                 </a>
                             </div>
                         </div>
                         <div class="row profile-text-center light">
                             <div class="col">
-                                <div class="profile-number">{{profile.postsNumber}} {{profile.postsUnit}}</div>
+                                <div class="profile-number">{{model.postsNumber}} {{model.postsUnit}}</div>
                                 <div class="profile-number-text-under">PUBLICACIONES</div>
                             </div>
                             <div class="col">
-                                <div class="profile-number">{{profile.followersNumber}} {{profile.followersUnit}}</div>
+                                <div class="profile-number">{{model.followersNumber}} {{model.followersUnit}}</div>
                                 <div class="profile-number-text-under">SEGUIDORES</div>
                             </div>
                             <div class="col">
-                                <div class="profile-number">{{profile.followingNumber}} {{profile.followingUnit}}</div>
+                                <div class="profile-number">{{model.followingNumber}} {{model.followingUnit}}</div>
                                 <div class="profile-number-text-under">SIGUIENDO</div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div ng-repeat="item in profile.interests">
+                        <div ng-repeat="item in model.interests">
                             {{item.interestText}}
                         </div>
                     </div>
@@ -46,16 +46,16 @@
         </div>
         <div class="row">
             <div class="col profile-text-center">
-                <p>{{profile.summaryText}}</p>
+                <p>{{model.summaryText}}</p>
                 <p>
                     <span>|</span>
-                    <span ng-repeat="item in profile.tags">
+                    <span ng-repeat="item in model.tags">
                         <span class="tag-social-link-text" ng-click="viewTag(item)">{{item.tagText}}</span>
                         <span>|</span>
                     </span>
                 </p>
-                <p class="tag-social-link-text" ng-click="socialLink(profile.socialLinkUrl)">
-                    {{profile.socialLinkText}}
+                <p class="tag-social-link-text" ng-click="socialLink(model.socialLinkUrl)">
+                    {{model.socialLinkText}}
                 </p>
             </div>
         </div>

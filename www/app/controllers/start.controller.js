@@ -1,4 +1,6 @@
-angular.module('lufke').controller('StartController', function ($scope) {
+angular.module('lufke').controller('StartController', function ($scope, $state) {
 	console.log('Inicia ... StartController');
-	$scope.data = 'DATOS DE PRUEBA CONTROLADOR INICIO';
+	
+	$state.go('login');
+	return;
 });

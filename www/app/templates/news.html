@@ -7,17 +7,17 @@
     </ion-nav-buttons>
 
 	<ion-header-bar id="shareExperienceContainer" class="bar bar-subheader item-input-inset">
-		<textarea id="experienceTextArea" 
-				  ng-model="experienceText" 
-				  ng-blur="isExperienceTextFocus = false" 
-				  ng-focus="isExperienceTextFocus = true" 
+		<textarea id="model.experienceTextArea" 
+				  ng-model="model.experienceText" 
+				  ng-blur="model.isExperienceTextFocus = false" 
+				  ng-focus="model.isExperienceTextFocus = true" 
 				  placeholder="Comparte tu experiencia...">
 		</textarea>
 		<div class="padding">
-			<button ng-show="isExperienceTextFocus || experienceText.length" 
-					ng-disabled="!experienceText.length" 
+			<button ng-show="model.isExperienceTextFocus || model.experienceText.length" 
+					ng-disabled="!model.experienceText.length" 
 					class="button button-positive ion-edit" 
-					ng-click="shareExperience(experienceText)">
+					ng-click="shareExperience()">
 			</button>
 		</div>
 	</ion-header-bar>
@@ -26,12 +26,12 @@
         <ion-refresher pulling-text="Soltar para refrescar" on-refresh="updateNews()">
         </ion-refresher>
 		<ion-list>
-			<a ng-show="!posts.length" class="item item-icon-left item-icon-right" href="#/tab/explore">
+			<a ng-show="!model.posts.length" class="item item-icon-left item-icon-right" href="#/tab/explore">
                 No hay noticias que mostrar :(<br/>
 				Deberías seguir algunas personas<br>
 				<i class="icon ion-eye"></i>
 			</a>
-            <lufke-post ng-show="posts.length" ng-repeat="post in posts"></lufke-post>
+            <lufke-post ng-show="model.posts.length" ng-repeat="post in model.posts"></lufke-post>
         </ion-list>
     </ion-content>
 </ion-view>

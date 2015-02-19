@@ -1,6 +1,6 @@
 angular.module('lufke').controller('NotificationsController', function ($scope) {
 	console.log('Inicia ... NotificationsController');
-	var datos = {
+	$scope.model = {
 		requests: {
 			totalRequests: 21,
 			titleText: "solicitudes de seguimiento",
@@ -55,9 +55,6 @@ angular.module('lufke').controller('NotificationsController', function ($scope) 
 			]
 		}
 	};
-
-	$scope.requests = datos.requests;
-	$scope.notifications = datos.notifications;
 
 	/* Metodo para control de requests */
 

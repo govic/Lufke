@@ -1,6 +1,6 @@
 angular.module('lufke').controller('FiltersController', function ($scope) {
 	console.log('Inicia ... FiltersController');
-	var data = {
+	$scope.model = {
 		interests: [
 			{
 				interestId: 1,
@@ -32,8 +32,6 @@ angular.module('lufke').controller('FiltersController', function ($scope) {
 		distance: 100,
 		distanceUnit: "KM"
 	};
-
-	$scope.filters = data;
 
 	$scope.editInterests = function () {
 		alert("Editar intereses!")

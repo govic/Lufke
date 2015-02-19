@@ -1,7 +1,7 @@
 angular.module('lufke').controller('ProfileController', function ($scope) {
 	console.log('Inicia ... ProfileController');
 
-	var data = {
+	$scope.model = {
 		backgroundImgUrl: "http://goo.gl/WgH5Ju",
 		profileImgUrl: "http://goo.gl/T4xQbr",
 		profileFirstName: "RYAN",
@@ -41,8 +41,6 @@ angular.module('lufke').controller('ProfileController', function ($scope) {
 		socialLinkText: "www.socialink.me/ryansheckler",
 		socialLinkUrl: "http://www.socialink.me/ryansheckler?origin=lufkeapp"
 	};
-
-	$scope.profile = data;
 
 	$scope.editProfile = function (profile) {
 		alert("Editar profile id = " + profile.profileId);

@@ -1,6 +1,6 @@
 angular.module('lufke').controller('ExploreController', function ($scope) {
 	console.log('Inicia...ExploreController ');
-	var datos = {
+	$scope.model = {
 		topUsers: [
 			{
 				backgoundImgUrl: "http://goo.gl/LQQ0mn",
@@ -122,10 +122,6 @@ angular.module('lufke').controller('ExploreController', function ($scope) {
 			]
 		]
 	};
-
-
-	$scope.topUsers = datos.topUsers;
-	$scope.topCategories = datos.topCategories;
 
 	$scope.allCategories = function () {
 		alert('All Categories');
