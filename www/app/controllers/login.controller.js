@@ -1,4 +1,6 @@
-angular.module('lufke').controller('LoginController', function ($scope, $state, $ionicPopup) {
+angular.module('lufke').controller('LoginController', function ($scope, $state, $ionicHistory, $ionicPopup) {
+	$ionicHistory.clearCache();
+	
 	console.log('Inicia ... LoginController');
 
 	$scope.model = {
@@ -70,6 +72,7 @@ angular.module('lufke').controller('LoginController', function ($scope, $state, 
 
 		} else {
 			$scope.model.loginError = true;
+			$scope.model.user.password !== ""
 		}
 	};
 
