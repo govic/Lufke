@@ -55,7 +55,7 @@
 				</div>
 			</ion-item>
 
-			<ion-item ng-repeat="comment in model.post.comments" class="post-detail-comment-container" on-hold="showDeleteComment(model.post.postId, comment.commentId)">
+			<ion-item ng-repeat="comment in model.post.comments" class="post-detail-comment-container" on-hold="showDeleteComment(comment.commentId)">
 				<div class="row">
 					<div class="post-detail-comment-user-img-container">
 						<img class="post-detail-comment-user-img" ng-src="{{comment.profile.image}}"/>

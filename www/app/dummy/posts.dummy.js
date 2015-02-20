@@ -1,92 +1,4 @@
-var dummyPostList = [
-	{
-		"postId": 1,
-		"backgroundImgUrl": "http://goo.gl/56Q265",
-		"profile": {
-			"image": "http://goo.gl/PXFWyj",
-			"name": "Soila Cuevas"
-		},
-		"location": "Pichilemu",
-		"timestamp": "4h",
-		"text": "Tengo lindos ojos vieron?",
-		"totalStars": 42,
-		"totalComments": 3,
-		"link": ""
-	},
-	{
-		"postId": 2,
-		"backgroundImgUrl": "http://i.imgur.com/xxyIUPy.jpg",
-		"profile": {
-			"image": "http://goo.gl/9kbu0C",
-			"name": "Elsa Popeludo"
-		},
-		"location": "Viña del Mar",
-		"timestamp": "6h",
-		"text": "Hola mundo",
-		"totalStars": 2,
-		"totalComments": 5,
-		"link": ""
-	},
-	{
-		"postId": 6,
-		"backgroundImgUrl": "http://goo.gl/jMSO58",
-		"profile": {
-			"image": "http://i.imgur.com/WDFrSmC.png",
-			"name": "Cuño Chileno"
-		},
-		"location": "Chillán",
-		"timestamp": "8h",
-		"text": "En el trekking para a la cabaña 25!",
-		"totalStars": 0,
-		"totalComments": 2,
-		"link": ""
-	},
-	{
-		"postId": 3,
-		"backgroundImgUrl": "http://goo.gl/wgyCuG",
-		"profile": {
-			"image": "http://i.imgur.com/dC0xDm4.png",
-			"name": "Coneja Dientuda"
-		},
-		"location": "Lago Todos los Santos",
-		"timestamp": "30m",
-		"text": "Hola mundo",
-		"totalStars": 2,
-		"totalComments": 5,
-		"link": ""
-	},
-	{
-		"postId": 4,
-		"backgroundImgUrl": "http://goo.gl/oLqDKT",
-		"profile": {
-			"image": "http://goo.gl/syLmKX",
-			"name": "Johnny Sins"
-		},
-		"location": "Pichilemu",
-		"timestamp": "4h",
-		"text": "Respeto por la amistad y la pureza!",
-		"totalStars": 2,
-		"totalComments": 5,
-		"link": ""
-	},
-	{
-		"postId": 5,
-		"backgroundImgUrl": "http://goo.gl/6G0uaG",
-		"profile": {
-			"image": "http://goo.gl/gZQkgx",
-			"name": "Feastancia Pérez"
-		},
-		"location": "Arica",
-		"timestamp": "8h",
-		"text": "Ahí con las chiquillas bailando en el agüita jijiji",
-		"totalStars": 0,
-		"totalComments": 2,
-		"link": ""
-	}
-];
-
-
-var dummyPostDetail = [
+var dummyPosts = [
 	{
 		"postId": 1,
 		"backgroundImgUrl": "http://goo.gl/56Q265",
@@ -307,7 +219,7 @@ var dummyPostDetail = [
 							"name": "Edwards Wade",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestamp": "0m",
+						"timestamp": "1424457424314",
 						"text": "Fugiat cillum nulla incididunt deserunt non reprehenderit duis. Fugiat cillum nulla incididunt deserunt non reprehenderit duis. Fugiat cillum nulla incididunt deserunt non reprehenderit duis. Fugiat cillum nulla incididunt deserunt non reprehenderit duis."
 					},
 					{

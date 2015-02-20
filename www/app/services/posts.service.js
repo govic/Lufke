@@ -6,12 +6,12 @@ angular.module('lufke')
 					console.log("localStorage.newsUpdateNumber % 2 = " + $localStorage.newsUpdateNumber % 2);
 
 					if ($localStorage.newsUpdateNumber % 2 === 0) {
-						postsList = lodash.filter(dummyPostList, function (item) {
+						postsList = lodash.filter(dummyPosts, function (item) {
 							return item.postId <= 3;
 						});
 					}
 					else {
-						postsList = lodash.filter(dummyPostList, function (item) {
+						postsList = lodash.filter(dummyPosts, function (item) {
 							return item.postId > 3;
 						});
 					}
@@ -20,21 +20,24 @@ angular.module('lufke')
 
 				},
 				getPost: function (id) {
-					return lodash.find(dummyPostDetail, function (item) {
+					return lodash.find(dummyPosts, function (item) {
 						return item.postId == id;
 					});
 				},
 				deleteComment: function (postId, commentId) {
-					var post = lodash.find(dummyPostDetail, function (item) {
+					var post = lodash.find(dummyPosts, function (item) {
 						return item.postId == postId;
 					});
 
-					return lodash.remove(post.comments, function (comment) {
+					lodash.remove(post.comments, function (comment) {
+						console.log("comment.commentId == commentId: " + comment.commentId  + "==" + commentId);
 						return comment.commentId == commentId;
 					});
+					
+					return;
 				},
 				addComment: function (postId, commentText) {
-					var post = lodash.find(dummyPostDetail, function (item) {
+					var post = lodash.find(dummyPosts, function (item) {
 						return item.postId == postId;
 					});
 

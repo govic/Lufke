@@ -63,18 +63,13 @@
 	padding-right: 0;
 }
 
+.post-detail-comment-container:active{
+	background-color: #f4f4f4;
+}
+
 .post-detail-comment-text {
     font-size: 80%;
 	white-space: pre-wrap;
-}
-
-.post-detail-comment-remove a{
-	visibility:hidden;
-}
-
-.post-detail-comment-remove:hover a{
-	visibility: visible;
-	font-size: 80%;
 }
 
 .post-detail-comment-user-img-container {
