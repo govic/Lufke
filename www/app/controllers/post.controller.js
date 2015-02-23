@@ -1,25 +1,27 @@
 angular.module('lufke')
-		.controller('PostController', function ($scope, $stateParams, $ionicPopup, $ionicActionSheet, PostsService) {
+		.controller('PostController', function ($scope, $state, $stateParams, $ionicHistory, $ionicPopup, $ionicActionSheet, PostsService) {
 			console.log('Inicia ... PostController');
-
 			$scope.model = {
 				post: PostsService.getPost($stateParams.postId),
 				commentText: ""
 			};
-
 			$scope.updatePost = function () {
 				$scope.$broadcast('scroll.refreshComplete');
 				$scope.model.post = PostsService.getPost($stateParams.postId);
-				//TODO: agregar comentarios nuevos o algo asi
 			};
-
 			$scope.addComment = function () {
-				alert($scope.model.commentText);
 				PostsService.addComment($stateParams.postId, $scope.model.commentText);
-				
 				$scope.model.commentText = "";
 			};
-
+			$scope.showMessage = function (title, message) {
+				$ionicPopup.alert(
+						{
+							title: title,
+							template: message,
+							okText: "Aceptar"
+						}
+				);
+			};
 			$scope.showMore = function () {
 				var options = $ionicActionSheet.show({
 					buttons: [
@@ -29,19 +31,56 @@ angular.module('lufke')
 					destructiveText: '<i class="ion-trash-b"></i> <span>Borrar</span>',
 					cancelText: 'Cancelar',
 					cancel: function () {
-						alert("cancelar");
+						//Hacer nada
 					},
 					destructiveButtonClicked: function () {
-						alert("borrar");
+						var result = PostsService.deletePost($stateParams.postId);
+						if (result) {
+							//TODO: corregir regreso, no pasa por controladores
+							if ($ionicHistory.backView()) {
+								$ionicHistory.goBack();
+							}
+							else {
+								$state.go("tab.news");
+							}
+						}
+
 						return true; //Close the model?
 					},
 					buttonClicked: function (index) {
-						alert("presionado botón nro: " + index);
+						console.log("presionado botón nro: " + index);
+						switch (index) {
+							case 0:
+								PostsService.sharePost($stateParams.postId);
+								break;
+							case 1:
+
+								var confirm = $ionicPopup.confirm(
+										{
+											title: 'Confirmación',
+											template: '¿Está seguro que desea reportar esta publicación?',
+											cancelText: 'No',
+											cancelType: 'button-positive', 
+											okText: 'Sí',
+											okType: 'button-light'
+										}
+								);
+								confirm.then(function (res) {
+									if (res) {
+										PostsService.reportPost($stateParams.postId);
+										$scope.showMessage("Se ha reportado la publicación");
+									}
+								});
+
+								break;
+							default:
+								$scope.showMessage("Error", "Un error desconocido ha ocurrido");
+								break;
+						}
 						return true;
 					}
 				});
 			};
-
 			$scope.showDeleteComment = function (commentId) {
 				var confirmPopup = $ionicPopup.confirm({
 					title: 'Borrar comentario',
@@ -51,10 +90,8 @@ angular.module('lufke')
 				});
 				confirmPopup.then(function (res) {
 					console.log('res: ' + res);
-
 					if (res) {
 						PostsService.deleteComment($stateParams.postId, commentId);
-						$scope.updatePost();
 					}
 				});
 			};
