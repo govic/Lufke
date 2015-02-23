@@ -19,7 +19,7 @@
 				<span ng-show="model.post.location !== ''" id="post-detail-location">
 					<i class="ion-location"></i> {{model.post.location}}<br/>
 				</span>
-				<span><i class="ion-clock"></i> {{model.post.timestamp}}</span>
+				<span><i class="ion-clock"></i> </span><span am-time-ago="model.post.timestamp"></span>
 			</div>
 
 
@@ -62,7 +62,8 @@
 					</div>
 
 					<div class="col col-top">
-						<span class="post-detail-comment-user-name">{{comment.profile.name}}</span><br>
+						<span class="post-detail-comment-user-name">{{comment.profile.name}}</span>
+						<span class="post-detail-comment-timestamp" am-time-ago="comment.timestamp"></span><br/>
 						<span class="post-detail-comment-text">{{comment.text}}</span>
 					</div>
 				</div>

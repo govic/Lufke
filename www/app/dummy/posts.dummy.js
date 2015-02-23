@@ -7,7 +7,7 @@ var dummyPosts = [
 			"name": "Soila Cuevas"
 		},
 		"location": "Pichilemu",
-		"timestamp": "4h",
+		"timestamp": "1396621153000",
 		"text": "Tengo lindos ojos vieron?",
 		"totalStars": 42,
 		"totalComments": 3,
@@ -19,7 +19,7 @@ var dummyPosts = [
 					"name": "Mullins Dominguez",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "0m",
+				"timestamp": "1396621153000",
 				"text": "Enim incididunt veniam dolore officia laboris nostrud."
 			},
 			{
@@ -28,7 +28,7 @@ var dummyPosts = [
 					"name": "Estes Frazier",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "1m",
+				"timestamp": "1396621153000",
 				"text": "Ex ut aliqua ullamco sint."
 			},
 			{
@@ -37,7 +37,7 @@ var dummyPosts = [
 					"name": "Dean Ward",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "2m",
+				"timestamp": "1396621153000",
 				"text": "Eu ipsum veniam officia non deserunt est dolore Lorem labore."
 			}
 		]
@@ -50,7 +50,7 @@ var dummyPosts = [
 			"name": "Elsa Popeludo"
 		},
 		"location": "Viña del Mar",
-		"timestamp": "6h",
+		"timestamp": "1396621153000",
 		"text": "Hola mundo",
 		"totalStars": 2,
 		"totalComments": 5,
@@ -62,7 +62,7 @@ var dummyPosts = [
 					"name": "Emma Clarke",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "0m",
+				"timestamp": "1396621153000",
 				"text": "Magna cupidatat ea anim mollit."
 			},
 			{
@@ -71,7 +71,7 @@ var dummyPosts = [
 					"name": "Saunders Rasmussen",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "1m",
+				"timestamp": "1396621153000",
 				"text": "Ea id excepteur aliqua mollit occaecat occaecat non esse."
 			},
 			{
@@ -80,7 +80,7 @@ var dummyPosts = [
 					"name": "Langley Ruiz",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "2m",
+				"timestamp": "1396621153000",
 				"text": "Occaecat consectetur ullamco aliqua non nisi pariatur voluptate Lorem et labore."
 			},
 			{
@@ -89,7 +89,7 @@ var dummyPosts = [
 					"name": "Hunter Hewitt",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "3m",
+				"timestamp": "1396621153000",
 				"text": "Cillum et deserunt aliquip nisi sint magna ipsum commodo mollit."
 			},
 			{
@@ -98,7 +98,7 @@ var dummyPosts = [
 					"name": "Pate Hughes",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "4m",
+				"timestamp": "1396621153000",
 				"text": "Non proident officia eiusmod esse culpa Lorem eu nulla."
 			}
 		]
@@ -111,7 +111,7 @@ var dummyPosts = [
 			"name": "Cuño Chileno"
 		},
 		"location": "Chillán",
-		"timestamp": "8h",
+		"timestamp": "1396621153000",
 		"text": "En el trekking para a la cabaña 25!",
 		"totalStars": 0,
 		"totalComments": 2,
@@ -123,7 +123,7 @@ var dummyPosts = [
 					"name": "Katheryn Delaney",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "0m",
+				"timestamp": "1396621153000",
 				"text": "Exercitation anim fugiat et aute magna quis ut occaecat laborum laboris consequat."
 			},
 			{
@@ -132,7 +132,7 @@ var dummyPosts = [
 					"name": "Albert Mccall",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "1m",
+				"timestamp": "1396621153000",
 				"text": "Fugiat irure reprehenderit exercitation sit in."
 			}
 		]
@@ -145,7 +145,7 @@ var dummyPosts = [
 			"name": "Coneja Dientuda"
 		},
 		"location": "Lago Todos los Santos",
-		"timestamp": "30m",
+		"timestamp": "1396621153000",
 		"text": "Hola mundo",
 		"totalStars": 2,
 		"totalComments": 5,
@@ -157,7 +157,7 @@ var dummyPosts = [
 					"name": "Rutledge Hess",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "0m",
+				"timestamp": "1396621153000",
 				"text": "Eu excepteur fugiat eiusmod cillum mollit id amet veniam consectetur."
 			},
 			{
@@ -166,7 +166,7 @@ var dummyPosts = [
 					"name": "Matthews Paul",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "1m",
+				"timestamp": "1396621153000",
 				"text": "Id anim proident incididunt veniam consequat elit in."
 			},
 			{
@@ -175,7 +175,7 @@ var dummyPosts = [
 					"name": "Malinda Stephenson",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "2m",
+				"timestamp": "1396621153000",
 				"text": "Aute do ad sint reprehenderit ex amet minim."
 			},
 			{
@@ -184,7 +184,7 @@ var dummyPosts = [
 					"name": "Mason Dotson",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "3m",
+				"timestamp": "1396621153000",
 				"text": "Cupidatat cillum nisi fugiat et deserunt duis irure anim quis veniam labore reprehenderit voluptate."
 			},
 			{
@@ -193,7 +193,7 @@ var dummyPosts = [
 					"name": "Smith Kennedy",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "4m",
+				"timestamp": "1396621153000",
 				"text": "Aliqua nisi in sunt aute voluptate ipsum eu occaecat et ipsum reprehenderit fugiat magna."
 			}
 		]
@@ -206,7 +206,7 @@ var dummyPosts = [
 			"name": "Johnny Sins"
 		},
 		"location": "Pichilemu",
-		"timestamp": "4h",
+		"timestamp": "1396621153000",
 		"text": "Respeto por la amistad y la pureza!",
 		"totalStars": 2,
 		"totalComments": 5,
@@ -219,7 +219,7 @@ var dummyPosts = [
 							"name": "Edwards Wade",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestamp": "1424457424314",
+						"timestamp": "1396621153000",
 						"text": "Fugiat cillum nulla incididunt deserunt non reprehenderit duis. Fugiat cillum nulla incididunt deserunt non reprehenderit duis. Fugiat cillum nulla incididunt deserunt non reprehenderit duis. Fugiat cillum nulla incididunt deserunt non reprehenderit duis."
 					},
 					{
@@ -228,7 +228,7 @@ var dummyPosts = [
 							"name": "Mari Foley",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestamp": "1m",
+						"timestamp": "1396621153000",
 						"text": "Deserunt enim nulla amet consectetur veniam esse anim pariatur do ipsum."
 					},
 					{
@@ -237,7 +237,7 @@ var dummyPosts = [
 							"name": "Moore Fowler",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestamp": "2m",
+						"timestamp": "1396621153000",
 						"text": "Sit aute duis consequat ullamco dolor aliquip ex."
 					},
 					{
@@ -246,7 +246,7 @@ var dummyPosts = [
 							"name": "Acevedo Lamb",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestamp": "3m",
+						"timestamp": "1396621153000",
 						"text": "Excepteur tempor adipisicing non pariatur ullamco laborum proident nulla laboris velit qui."
 					},
 					{
@@ -255,7 +255,7 @@ var dummyPosts = [
 							"name": "Osborn Leblanc",
 							"image": "http://placehold.it/48x48"
 						},
-						"timestamp": "4m",
+						"timestamp": "1396621153000",
 						"text": "Exercitation esse proident eu deserunt commodo commodo elit aliquip esse aliqua incididunt."
 					}
 				]
@@ -268,7 +268,7 @@ var dummyPosts = [
 			"name": "Feastancia Pérez"
 		},
 		"location": "Arica",
-		"timestamp": "8h",
+		"timestamp": "1396621153000",
 		"text": "Ahí con las chiquillas bailando en el agüita jijiji",
 		"totalStars": 0,
 		"totalComments": 2,
@@ -280,7 +280,7 @@ var dummyPosts = [
 					"name": "Marva Hensley",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "0m",
+				"timestamp": "1396621153000",
 				"text": "Occaecat qui fugiat qui mollit nisi sit culpa ea non."
 			},
 			{
@@ -289,7 +289,7 @@ var dummyPosts = [
 					"name": "Alta Duke",
 					"image": "http://placehold.it/48x48"
 				},
-				"timestamp": "1m",
+				"timestamp": "1396621153000",
 				"text": "Cupidatat officia consectetur fugiat reprehenderit aliquip exercitation mollit amet ullamco dolor ipsum."
 			}
 		]

@@ -1,4 +1,4 @@
-angular.module('lufke', ['ionic', 'ngStorage', 'ngLodash'])
+angular.module('lufke', ['ionic', 'ngStorage', 'ngLodash', 'angularMoment'])
 		.config(function ($urlRouterProvider, $ionicConfigProvider) {
 			$urlRouterProvider.otherwise('/start');
 			$ionicConfigProvider.tabs.position('bottom');
@@ -16,3 +16,21 @@ angular.module('lufke', ['ionic', 'ngStorage', 'ngLodash'])
 				}
 			});
 		});
+		
+moment.lang('es', {
+    relativeTime : {
+        future: "en %s",
+        past:   "%s",
+        s:  "ahora",
+        m:  "1 minuto",
+        mm: "%m minutos",
+        h:  "1 hora",
+        hh: "%h horas",
+        d:  "1 día",
+        dd: "%d días",
+        M:  "1 mes",
+        MM: "%d meses",
+        y:  "1 año",
+        yy: "%d años"
+    }
+});

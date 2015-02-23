@@ -34,16 +34,34 @@ angular.module('lufke')
 						//Hacer nada
 					},
 					destructiveButtonClicked: function () {
-						var result = PostsService.deletePost($stateParams.postId);
-						if (result) {
-							//TODO: corregir regreso, no pasa por controladores
-							if ($ionicHistory.backView()) {
-								$ionicHistory.goBack();
+						var confirm = $ionicPopup.confirm(
+								{
+									title: 'Confirmación',
+									template: '¿Está seguro que desea borrar esta publicación?',
+									cancelText: 'No',
+									cancelType: 'button-positive',
+									okText: 'Sí',
+									okType: 'button-light'
+								}
+						);
+						confirm.then(function (res) {
+							if (res) {
+								var result = PostsService.deletePost($stateParams.postId);
+								if (result) {
+									//TODO: corregir regreso, no pasa por controladores
+									if ($ionicHistory.backView()) {
+										$ionicHistory.goBack();
+									}
+									else {
+										$state.go("tab.news");
+									}
+								}
+								else
+								{
+									$scope.showMessage("Error", "Ha ocurrido un error al borrar la publicación");
+								}
 							}
-							else {
-								$state.go("tab.news");
-							}
-						}
+						});
 
 						return true; //Close the model?
 					},
@@ -60,7 +78,7 @@ angular.module('lufke')
 											title: 'Confirmación',
 											template: '¿Está seguro que desea reportar esta publicación?',
 											cancelText: 'No',
-											cancelType: 'button-positive', 
+											cancelType: 'button-positive',
 											okText: 'Sí',
 											okType: 'button-light'
 										}
