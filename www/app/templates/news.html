@@ -14,12 +14,18 @@
 				  placeholder="Comparte tu experiencia...">
 		</textarea>
 		<div class="padding">
-			<button ng-show="model.isExperienceTextFocus || model.experienceText.length" 
-					ng-disabled="!model.experienceText.length" 
+			<button class="button button-positive ion-images" 
+					ng-click="addMedia()">
+			</button>
+		</div>
+		<div class="padding">
+			<button ng-disabled="!(model.experienceText.length || model.mediaSelected)" 
 					class="button button-positive ion-edit" 
 					ng-click="shareExperience()">
 			</button>
 		</div>
+		
+		
 	</ion-header-bar>
 
     <ion-content padding="true">

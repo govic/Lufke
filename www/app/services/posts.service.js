@@ -37,6 +37,23 @@ angular.module('lufke')
 					
 					return removed.length > 0;
 				},
+				newPost: function(experienceText, mediaSelected) {
+					dummyPosts.unshift({
+						"postId": Date.now(),
+						"backgroundImgUrl": mediaSelected,
+						"profile": {
+							"image": "http://placehold.it/48x48",
+							"name": "CURRENT USER"
+						},
+						"location": "",
+						"timestamp": Date.now(),
+						"text": experienceText,
+						"totalStars": 0,
+						"totalComments": 0,
+						"link": "",
+						"comments": []
+					});
+				},				
 				sharePost: function (postId) {
 					//TODO: compartir post
 					return true;
@@ -62,7 +79,7 @@ angular.module('lufke')
 						return item.postId == postId;
 					});
 
-					return post.comments.push(
+					return post.comments.unshift(
 							{
 								"commentId": Date.now(),
 								"profile": {
