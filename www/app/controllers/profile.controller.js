@@ -1,11 +1,11 @@
-angular.module('lufke').controller('ProfileController', function ($scope) {
+angular.module('lufke').controller('ProfileController', function ($scope, PostsService) {
 	console.log('Inicia ... ProfileController');
 
 	$scope.model = {
 		backgroundImgUrl: "http://goo.gl/WgH5Ju",
 		profileImgUrl: "http://goo.gl/T4xQbr",
-		profileFirstName: "RYAN",
-		profileLastName: "SHECKLER",
+		profileFirstName: "Ryan",
+		profileLastName: "Sheckler",
 		profileId: 1,
 		postsNumber: 2093,
 		postsUnit: "",
@@ -15,17 +15,17 @@ angular.module('lufke').controller('ProfileController', function ($scope) {
 		followingUnit: "",
 		interests: [
 			{
-				interestText: "SURFING",
+				interestText: "Surfing",
 				interestId: 1
 			}, {
-				interestText: "HIKING",
+				interestText: "Hiking",
 				interestId: 2
 			}, {
-				interestText: "SKATEBOARD",
+				interestText: "Skateboard",
 				interestId: 3
 			}
 		],
-		summaryText: "I skateboard and I'm from San Clemente",
+		summaryText: "Skateboard fan and I'm from San Clemente",
 		tags: [
 			{
 				tagText :"@Red-Bull",
@@ -39,8 +39,15 @@ angular.module('lufke').controller('ProfileController', function ($scope) {
 			}
 		],
 		socialLinkText: "www.socialink.me/ryansheckler",
-		socialLinkUrl: "http://www.socialink.me/ryansheckler?origin=lufkeapp"
+		socialLinkUrl: "http://www.socialink.me/ryansheckler?origin=lufkeapp",
+		lastPosts: []
 	};
+	
+	$scope.$on('$ionicView.afterEnter', function () {
+		//TODO: el servicio debe encargarse de actualizar cambios en la lista de noticias
+		console.log("Entro a... ProfileController");
+		$scope.model.lastPosts = PostsService.getLastUserPosts($scope.model.profileId, 0);
+	});
 
 	$scope.editProfile = function (profile) {
 		alert("Editar profile id = " + profile.profileId);

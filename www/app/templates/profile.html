@@ -1,13 +1,12 @@
-<ion-view  hide-back-button="true" view-title="Perfil">
+<ion-view hide-back-button="true" view-title="Perfil">
     <ion-content class="padding">
-        <style type="text/css">{{style_before}}</style>
         <div class="row profile-background-img" ng-style="{'background-image': 'url(' + model.backgroundImgUrl + ')'}">
             <div class="col">
                 <div class="row">
-                    <div class="col">
-                        <img ng-src="{{model.profileImgUrl}}" class="profile-main-img" />
+                    <div>
+                        <img id="profile-img" ng-src="{{model.profileImgUrl}}" />
                     </div>
-                    <div class="col col-75">
+                    <div class="col">
                         <div class="row light">
                             <div class="col">
                                 <div class="profile-name-text">{{model.profileFirstName}}</div>
@@ -22,15 +21,15 @@
                         <div class="row profile-text-center light">
                             <div class="col">
                                 <div class="profile-number">{{model.postsNumber}} {{model.postsUnit}}</div>
-                                <div class="profile-number-text-under">PUBLICACIONES</div>
+                                <div class="profile-number-text-under">Publicaciones</div>
                             </div>
                             <div class="col">
                                 <div class="profile-number">{{model.followersNumber}} {{model.followersUnit}}</div>
-                                <div class="profile-number-text-under">SEGUIDORES</div>
+                                <div class="profile-number-text-under">Seguidores</div>
                             </div>
                             <div class="col">
                                 <div class="profile-number">{{model.followingNumber}} {{model.followingUnit}}</div>
-                                <div class="profile-number-text-under">SIGUIENDO</div>
+                                <div class="profile-number-text-under">Siguiendo</div>
                             </div>
                         </div>
                     </div>
@@ -43,7 +42,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>		
         <div class="row">
             <div class="col profile-text-center">
                 <p>{{model.summaryText}}</p>
