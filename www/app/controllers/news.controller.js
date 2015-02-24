@@ -27,6 +27,11 @@ angular.module('lufke')
 				var newPosts = PostsService.getPosts();
 				$scope.model.posts = newPosts;
 			};
+			
+			$scope.toggleLike = function (postId) {
+				PostsService.toggleLike(postId);
+				$scope.model.posts = PostsService.getPosts();
+			};
 
 			$scope.shareExperience = function () {
 				PostsService.newPost($scope.model.experienceText, $scope.model.mediaSelected);

@@ -1,7 +1,7 @@
 angular.module('lufke')
-		.directive('lufkePost', function () {
+		.directive('postSummary', function () {
 			return {
 				restrict: 'E',
-				templateUrl: 'app/templates/post-summary.html'
+				templateUrl: 'app/templates/directives/post-summary.html'
 			};
 		});

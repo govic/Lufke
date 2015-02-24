@@ -29,10 +29,15 @@
 			<div class="col">{{model.post.text}}</div>
 		</div>
 
-		<div class="row">
+		<div class="row" ng-click="toggleLike()">
 			<div class="col">
-				<i class="ion-star"></i> <span>{{model.post.totalStars}}</span>
+				<span>
+					<i ng-show="model.post.isLiked" class="ion-ios7-star"></i> 
+					<i ng-show="!model.post.isLiked" class="ion-ios7-star-outline"></i> 
+					{{model.post.totalStars}}
+				</span>
 			</div>
+
 			<div class="col" id="post-detail-more" ng-click="showMore()">
 				<i class="ion-more"></i>
 			</div>
@@ -42,8 +47,8 @@
 			<ion-item id="commentTextContainer" class="item-input-inset">
 				<textarea id="commentTextArea"
 						  ng-model="model.commentText"
-						  ng-blur="model.isCommentTextFocus=false" 
-						  ng-focus="model.isCommentTextFocus=true" 
+						  ng-blur="model.isCommentTextFocus = false" 
+						  ng-focus="model.isCommentTextFocus = true" 
 						  placeholder="Agrega un comentario...">
 				</textarea>
 				<div class="padding">

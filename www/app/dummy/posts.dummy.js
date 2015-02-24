@@ -7,11 +7,11 @@ var dummyPosts = [
 			"name": "Soila Cuevas"
 		},
 		"location": "Pichilemu",
-		"timestamp": "1396621153000",
+		"timestamp": "1397621153000",
 		"text": "Tengo lindos ojos vieron?",
 		"totalStars": 42,
 		"totalComments": 3,
-		"link": "",
+		"isLiked": "true",
 		"comments": [
 			{
 				"commentId": "54dcdc1cabff9284fc32e01a",
@@ -54,7 +54,7 @@ var dummyPosts = [
 		"text": "Hola mundo",
 		"totalStars": 2,
 		"totalComments": 5,
-		"link": "",
+		"isLiked": "true",
 		"comments": [
 			{
 				"commentId": "54dcdc571730aae4f1434e34",
@@ -115,7 +115,7 @@ var dummyPosts = [
 		"text": "En el trekking para a la cabaña 25!",
 		"totalStars": 0,
 		"totalComments": 2,
-		"link": "",
+		"isLiked": "true",
 		"comments": [
 			{
 				"commentId": "54dcdc8c50f536dcbc46e0f3",
@@ -149,7 +149,7 @@ var dummyPosts = [
 		"text": "Hola mundo",
 		"totalStars": 2,
 		"totalComments": 5,
-		"link": "",
+		"isLiked": "true",
 		"comments": [
 			{
 				"commentId": "54dcdcb2c9ce59a3739bf2b8",
@@ -210,7 +210,7 @@ var dummyPosts = [
 		"text": "Respeto por la amistad y la pureza!",
 		"totalStars": 2,
 		"totalComments": 5,
-		"link": "",
+		"isLiked": "true",
 		"comments":
 				[
 					{
@@ -272,7 +272,7 @@ var dummyPosts = [
 		"text": "Ahí con las chiquillas bailando en el agüita jijiji",
 		"totalStars": 0,
 		"totalComments": 2,
-		"link": "",
+		"isLiked": "true",
 		"comments": [
 			{
 				"commentId": "54dcdcdb381a10041925f2c9",

@@ -13,6 +13,11 @@ angular.module('lufke')
 				PostsService.addComment($stateParams.postId, $scope.model.commentText);
 				$scope.model.commentText = "";
 			};
+			$scope.toggleLike = function () {
+				PostsService.toggleLike($stateParams.postId);
+				$scope.model.post = PostsService.getPost($stateParams.postId);
+			};
+			
 			$scope.showMessage = function (title, message) {
 				$ionicPopup.alert(
 						{

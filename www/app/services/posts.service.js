@@ -50,10 +50,26 @@ angular.module('lufke')
 						"text": experienceText,
 						"totalStars": 0,
 						"totalComments": 0,
-						"link": "",
+						"isLiked": false,
 						"comments": []
 					});
 				},				
+				toggleLike: function (postId) {
+					var post = lodash.find(dummyPosts, function (item) {
+						return item.postId == postId;
+					});
+					
+					if(post.isLiked){
+						post.isLiked = false;
+						post.totalStars--;
+					}
+					else {
+						post.isLiked = true;
+						post.totalStars++;
+					}
+
+					return true;
+				},
 				sharePost: function (postId) {
 					//TODO: compartir post
 					return true;
