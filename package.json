@@ -2,6 +2,7 @@
   "name": "lufke",
   "version": "1.0.0",
   "description": "Lufke: An Ionic project",
+  "private": true,
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",

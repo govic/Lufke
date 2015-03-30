@@ -1,14 +1,14 @@
 var dummyPosts = [
 	{
 		"postId": 1,
-		"backgroundImgUrl": "http://goo.gl/56Q265",
+		"backgroundImgUrl": "http://goo.gl/EOXsMe",
 		"profile": {
-			"image": "http://goo.gl/PXFWyj",
-			"name": "Soila Cuevas"
+			"image": "http://goo.gl/7cFTjk",
+			"name": "Theresa Jake"
 		},
-		"location": "Pichilemu",
+		"location": "Illinois",
 		"timestamp": "1397621153000",
-		"text": "Tengo lindos ojos vieron?",
+		"text": "Nullam iaculis aliquam risus.",
 		"totalStars": 42,
 		"totalComments": 3,
 		"isLiked": "true",
@@ -44,14 +44,14 @@ var dummyPosts = [
 	},
 	{
 		"postId": 2,
-		"backgroundImgUrl": "http://i.imgur.com/xxyIUPy.jpg",
+		"backgroundImgUrl": "http://goo.gl/KtGGfA",
 		"profile": {
-			"image": "http://goo.gl/9kbu0C",
-			"name": "Elsa Popeludo"
+			"image": "http://goo.gl/bQvY3t",
+			"name": "Chase Simons"
 		},
-		"location": "Viña del Mar",
+		"location": "Nebraska",
 		"timestamp": "1396621153000",
-		"text": "Hola mundo",
+		"text": "Proin nibh nisl, imperdiet.",
 		"totalStars": 2,
 		"totalComments": 5,
 		"isLiked": "true",
@@ -107,12 +107,12 @@ var dummyPosts = [
 		"postId": 6,
 		"backgroundImgUrl": "http://goo.gl/jMSO58",
 		"profile": {
-			"image": "http://i.imgur.com/WDFrSmC.png",
-			"name": "Cuño Chileno"
+			"image": "http://goo.gl/DMJIxn",
+			"name": "Morish Herbey"
 		},
-		"location": "Chillán",
+		"location": "Oklahoma",
 		"timestamp": "1396621153000",
-		"text": "En el trekking para a la cabaña 25!",
+		"text": "Proin feugiat aliquam tortor!",
 		"totalStars": 0,
 		"totalComments": 2,
 		"isLiked": "true",
@@ -141,12 +141,12 @@ var dummyPosts = [
 		"postId": 3,
 		"backgroundImgUrl": "http://goo.gl/wgyCuG",
 		"profile": {
-			"image": "http://i.imgur.com/dC0xDm4.png",
-			"name": "Coneja Dientuda"
+			"image": "http://goo.gl/iFsE87",
+			"name": "Eddie Braxton"
 		},
-		"location": "Lago Todos los Santos",
+		"location": "Virginia Occidental",
 		"timestamp": "1396621153000",
-		"text": "Hola mundo",
+		"text": "Donec condimentum gravida rhoncus. ",
 		"totalStars": 2,
 		"totalComments": 5,
 		"isLiked": "true",
@@ -202,12 +202,12 @@ var dummyPosts = [
 		"postId": 4,
 		"backgroundImgUrl": "http://goo.gl/oLqDKT",
 		"profile": {
-			"image": "http://goo.gl/syLmKX",
-			"name": "Johnny Sins"
+			"image": "http://goo.gl/Qr7VxN",
+			"name": "Malinda Stephenson"
 		},
-		"location": "Pichilemu",
+		"location": "Minnesota",
 		"timestamp": "1396621153000",
-		"text": "Respeto por la amistad y la pureza!",
+		"text": "Donec luctus magna eget mauris eleifend!",
 		"totalStars": 2,
 		"totalComments": 5,
 		"isLiked": "true",
@@ -262,14 +262,14 @@ var dummyPosts = [
 	},
 	{
 		"postId": 5,
-		"backgroundImgUrl": "http://goo.gl/6G0uaG",
+		"backgroundImgUrl": "http://goo.gl/rVzkf1",
 		"profile": {
-			"image": "http://goo.gl/gZQkgx",
-			"name": "Feastancia Pérez"
+			"image": "http://goo.gl/xbRSp3",
+			"name": "Adam Clay"
 		},
-		"location": "Arica",
+		"location": "Ohio",
 		"timestamp": "1396621153000",
-		"text": "Ahí con las chiquillas bailando en el agüita jijiji",
+		"text": "Lorem ipsum dolor sit amet.",
 		"totalStars": 0,
 		"totalComments": 2,
 		"isLiked": "true",
