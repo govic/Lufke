@@ -1,4 +1,4 @@
-angular.module('lufke').controller('LoginController', function($localStorage, $http, $scope, $state, $ionicHistory, $ionicPopup) {
+angular.module('lufke').controller('LoginController', function($localStorage, $http, $scope, $state, $ionicHistory, $ionicPopup, Camera) {
     $ionicHistory.clearCache();
     console.log('Inicia ... LoginController');
     $localStorage.session = null;
@@ -59,19 +59,26 @@ angular.module('lufke').controller('LoginController', function($localStorage, $h
                 email: $scope.model.user.email,
                 password: $scope.model.user.password
             }).success(function(user) {
-            	$localStorage.session = user._id; //variable sesion con id usuario
+                $localStorage.session = user._id; //variable sesion con id usuario
                 $scope.model.loginError = false;
-	            $state.go('tab.news'); //redirige hacia news
-	            return;
-            }).error(function(){
-            	$localStorage.session = null;
-            	$scope.model.loginError = true;
-            	$scope.model.user.password !== "";
+                $state.go('tab.news'); //redirige hacia news
+                return;
+            }).error(function(a,b) {
+                $localStorage.session = null;
+                $scope.model.loginError = true;
+                $scope.model.user.password !== "";
             });
         } else {
-        	$localStorage.session = null;
+            $localStorage.session = null;
             $scope.model.loginError = true;
             $scope.model.user.password !== "";
         }
+    };
+    $scope.getPhoto = function() {
+        Camera.getPicture().then(function(imageURI) {
+            console.log(imageURI);
+        }, function(err) {
+            console.err(err);
+        });
     };
 });
