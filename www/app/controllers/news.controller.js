@@ -36,16 +36,18 @@ angular.module('lufke').controller('NewsController', function($http, $scope, $lo
     $scope.shareExperience = function() {
         //ingresa post en el usuario
         var post = {
-            id: '5519be8f0517b3241e1367ef',
+            id: $localStorage.session,
             experience: $scope.model.experienceText
         };
-        $http.post('http://localhost:3000/post', post).success(function() {});
-        //borra contenido de la vista
-        $scope.model.experienceText = "";
-        $scope.model.mediaSelected = "";
-        //recupera los post realizados para mostrarlos
-        $http.post('http://localhost:3000/post/getnews').success(function(posts) {
-            $scope.model.posts = posts;
+        $http.post('http://localhost:3000/post', post).success(function(user) {
+            //borra contenido de la vista
+            console.dir(user);
+            $scope.model.experienceText = "";
+            $scope.model.mediaSelected = "";
+            //recupera los post realizados para mostrarlos
+            $http.post('http://localhost:3000/post/getnews').success(function(posts) {
+                $scope.model.posts = posts;
+            });
         });
     };
     $scope.addMedia = function() {
