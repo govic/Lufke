@@ -6,8 +6,8 @@ angular.module('lufke').controller('ExploreController', function ($scope) {
 				backgoundImgUrl: "http://goo.gl/LQQ0mn",
 				profileImgUrl: "http://goo.gl/PXFWyj",
 				profileId: "1",
-				profileFirstName: "Elsa",
-				profileLastName: "Popeludo",
+				profileFirstName: "Scarlett",
+				profileLastName: "Johansson",
 				profileBackgroundImgUrl: "http://goo.gl/virQ16",
 				lastPosts: [
 					{
