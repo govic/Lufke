@@ -3,7 +3,7 @@ angular.module('lufke').controller('NewsController', function($http, $scope, $lo
     $localStorage.$default({
         'newsUpdateNumber': 0
     });
-    $http.post('http://localhost:3000/post/getnews').success(function(posts) {
+    $http.get('http://localhost:3000/post/getAll').success(function(posts) {
         $scope.model = {
             posts: posts,
             isExperienceTextFocus: false,
@@ -20,7 +20,10 @@ angular.module('lufke').controller('NewsController', function($http, $scope, $lo
         //TODO: hay que sacar el uso de localstorage, es solo para el dummy
         $localStorage.newsUpdateNumber++;
         $scope.$broadcast('scroll.refreshComplete');
-        $http.post('http://localhost:3000/post/getnews').success(function(posts) {
+        $http.get('http://localhost:3000/post/getAll').success(function(posts) {
+
+            console.dir(posts);
+
             $scope.model = {
                 posts: posts,
                 isExperienceTextFocus: false,
@@ -36,16 +39,16 @@ angular.module('lufke').controller('NewsController', function($http, $scope, $lo
     $scope.shareExperience = function() {
         //ingresa post en el usuario
         var post = {
-            id: $localStorage.session,
-            experience: $scope.model.experienceText
+            user_id: $localStorage.session,
+            post_text: $scope.model.experienceText
         };
-        $http.post('http://localhost:3000/post', post).success(function(user) {
+        $http.post('http://localhost:3000/post/newPost', post).success(function(user) {
             //borra contenido de la vista
             console.dir(user);
             $scope.model.experienceText = "";
             $scope.model.mediaSelected = "";
             //recupera los post realizados para mostrarlos
-            $http.post('http://localhost:3000/post/getnews').success(function(posts) {
+            $http.get('http://localhost:3000/post/getAll').success(function(posts) {
                 $scope.model.posts = posts;
             });
         });

@@ -1,14 +1,14 @@
-<div class="item post-summary" ng-style="{'background-image':'url({{post.backgroundImgUrl}})'}" ui-sref="post({'postId': post.postId})">
+<div class="item post-summary" ng-style="{'background-image':'url({{post.backgroundImgUrl}})'}" ui-sref="post({'postId': post._id})">
     <div class="row row-top">
         <div class="post-summary-user-img-container">
-            <img class="post-summary-user-img" ng-src="{{post.profile.image}}" alt="Foto de perfil"/>
+            <img class="post-summary-user-img" ng-src="{{post.authorUrlImage}}" alt="Foto de perfil"/>
         </div>
 
         <div class="col post-summary-user-data">
-            <span class="post-summary-user-name">{{post.profile.name}}<br/></span>
+            <span class="post-summary-user-name">{{post.authorName}}<br/></span>
 
             <span ng-show="post.location !== ''" class="post-summary-location">
-                <i class="ion-location"></i> {{post.location}}
+                <i class="ion-location"></i> {{post.authorLocation}}
             </span>
         </div>
 
@@ -23,7 +23,7 @@
 
     <div class="row row-bottom">
         <div class="col post-summary-footer">
-			<span ng-click="toggleLike(post.postId); $event.stopPropagation()">
+			<span ng-click="toggleLike(post._id); $event.stopPropagation()">
 				<i ng-show="post.isLiked" class="ion-ios7-star"></i> 
 				<i ng-show="!post.isLiked" class="ion-ios7-star-outline"></i> 
 				{{post.totalStars}}
