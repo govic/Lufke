@@ -1,9 +1,9 @@
-angular.module('lufke').controller('NewsController', function($http, $scope, $localStorage, $ionicPopup, PostsService) {
+angular.module('lufke').controller('NewsController', function(lodash, $http, $scope, $localStorage, $ionicPopup, PostsService, Camera) {
     console.log('Inicia ... NewsController');
     $localStorage.$default({
         'newsUpdateNumber': 0
     });
-    $http.get('http://localhost:3000/post/getAll').success(function(posts) {
+    $http.get(api.post.getAll).success(function(posts) {
         $scope.model = {
             posts: posts,
             isExperienceTextFocus: false,
@@ -11,19 +11,13 @@ angular.module('lufke').controller('NewsController', function($http, $scope, $lo
             experienceText: ""
         };
     });
-    /*$scope.$on('$ionicView.afterEnter', function() {
-        //TODO: el servicio debe encargarse de actualizar cambios en la lista de noticias
-        $scope.model.posts = PostsService.getPosts();
-    });*/
     console.log("Numero refrescos:" + $localStorage.newsUpdateNumber);
     $scope.updateNews = function() {
         //TODO: hay que sacar el uso de localstorage, es solo para el dummy
         $localStorage.newsUpdateNumber++;
         $scope.$broadcast('scroll.refreshComplete');
-        $http.get('http://localhost:3000/post/getAll').success(function(posts) {
-
+        $http.get(api.post.getAll).success(function(posts) {
             console.dir(posts);
-
             $scope.model = {
                 posts: posts,
                 isExperienceTextFocus: false,
@@ -33,8 +27,14 @@ angular.module('lufke').controller('NewsController', function($http, $scope, $lo
         });
     };
     $scope.toggleLike = function(postId) {
-        PostsService.toggleLike(postId);
-        $scope.model.posts = PostsService.getPosts();
+        $http.post(api.post.toggleLike, {
+            post_id: postId,
+            user_id: $localStorage.session
+        }).success(function(data) {
+            var post = lodash.find($scope.model.posts, { _id: postId});
+            post.totalStars = data.likes;
+            post.isLiked = data.is_liked;
+        });
     };
     $scope.shareExperience = function() {
         //ingresa post en el usuario
@@ -42,13 +42,13 @@ angular.module('lufke').controller('NewsController', function($http, $scope, $lo
             user_id: $localStorage.session,
             post_text: $scope.model.experienceText
         };
-        $http.post('http://localhost:3000/post/newPost', post).success(function(user) {
-            //borra contenido de la vista
+        $http.post(api.post.create, post).success(function(user) {
+            //borra contenido de la image/jpeg
             console.dir(user);
             $scope.model.experienceText = "";
             $scope.model.mediaSelected = "";
             //recupera los post realizados para mostrarlos
-            $http.get('http://localhost:3000/post/getAll').success(function(posts) {
+            $http.get(api.post.getAll).success(function(posts) {
                 $scope.model.posts = posts;
             });
         });
@@ -65,6 +65,13 @@ angular.module('lufke').controller('NewsController', function($http, $scope, $lo
             if (res) {
                 $scope.model.mediaSelected = res;
             }
+        });
+    };
+    $scope.getPhoto = function() {
+        Camera.getPicture().then(function(imageURI) {
+            $scope.model.mediaSelected = imageURI;
+        }, function(err) {
+            $scope.model.mediaSelected = '';
         });
     };
 });

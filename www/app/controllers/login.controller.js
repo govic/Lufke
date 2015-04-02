@@ -1,4 +1,4 @@
-angular.module('lufke').controller('LoginController', function($localStorage, $http, $scope, $state, $ionicHistory, $ionicPopup/*, Camera*/) {
+angular.module('lufke').controller('LoginController', function($localStorage, $http, $scope, $state, $ionicHistory, $ionicPopup) {
     $ionicHistory.clearCache();
     console.log('Inicia ... LoginController');
     $localStorage.session = null;
@@ -75,11 +75,4 @@ angular.module('lufke').controller('LoginController', function($localStorage, $h
             $scope.model.user.password !== "";
         }
     };
-    /*$scope.getPhoto = function() {
-        Camera.getPicture().then(function(imageURI) {
-        	$scope.model.foto = imageURI;
-        }, function(err) {
-        	$scope.model.foto = err;
-        });
-    };*/
 });

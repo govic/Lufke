@@ -1,7 +1,8 @@
 angular.module('lufke').controller('PostController', function($http, $scope, $state, $localStorage, $stateParams, $ionicHistory, $ionicPopup, $ionicActionSheet, PostsService) {
     console.log('Inicia ... PostController');
-    $http.post('http://localhost:3000/post/getPost', {
-        post_id: $stateParams.postId
+    $http.post(api.post.getById, {
+        post_id: $stateParams.postId,
+        user_id: $localStorage.session
     }).success(function(post) {
         $scope.model = {
             post: post,
@@ -9,15 +10,16 @@ angular.module('lufke').controller('PostController', function($http, $scope, $st
         };
     });
     $scope.updatePost = function() {
-        $http.post('http://localhost:3000/post/getPost', {
-            post_id: $stateParams.postId
+        $http.post(api.post.getById, {
+            post_id: $stateParams.postId,
+            user_id: $localStorage.session
         }).success(function(post) {
             $scope.$broadcast('scroll.refreshComplete');
             $scope.model.post = post;
         });
     };
     $scope.addComment = function() {
-        $http.post('http://localhost:3000/post/newComment', {
+        $http.post(api.post.comment.create, {
             post_id: $stateParams.postId,
             user_id: $localStorage.session,
             comment_text: $scope.model.commentText
@@ -29,8 +31,13 @@ angular.module('lufke').controller('PostController', function($http, $scope, $st
         });
     };
     $scope.toggleLike = function() {
-        PostsService.toggleLike($stateParams.postId);
-        $scope.model.post = PostsService.getPost($stateParams.postId);
+        $http.post(api.post.toggleLike, {
+            post_id: $scope.model.post._id,
+            user_id: $localStorage.session
+        }).success(function(data) {
+            $scope.model.post.totalStars = data.likes;
+            $scope.model.post.isLiked = data.is_liked;
+        });
     };
     $scope.showMessage = function(title, message) {
         $ionicPopup.alert({
