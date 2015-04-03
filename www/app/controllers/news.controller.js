@@ -31,7 +31,9 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
             post_id: postId,
             user_id: $localStorage.session
         }).success(function(data) {
-            var post = lodash.find($scope.model.posts, { _id: postId});
+            var post = lodash.find($scope.model.posts, {
+                _id: postId
+            });
             post.totalStars = data.likes;
             post.isLiked = data.is_liked;
         });
@@ -40,7 +42,8 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
         //ingresa post en el usuario
         var post = {
             user_id: $localStorage.session,
-            post_text: $scope.model.experienceText
+            post_text: $scope.model.experienceText,
+            image_file: $scope.model.mediaSelected
         };
         $http.post(api.post.create, post).success(function(user) {
             //borra contenido de la image/jpeg
@@ -68,10 +71,13 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
         });
     };
     $scope.getPhoto = function() {
-        Camera.getPicture().then(function(imageURI) {
-            $scope.model.mediaSelected = imageURI;
+        Camera.getPicture().then(function(imageData) {
+            $scope.model.mediaSelected = imageData;
         }, function(err) {
             $scope.model.mediaSelected = '';
+        }, {
+            destinationType: Camera.DestinationType.FILE_URI
+            
         });
     };
 });

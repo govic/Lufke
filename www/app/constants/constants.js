@@ -1,5 +1,5 @@
-var url_base = 'http://localhost:3000';
-//var url_base = 'http://lufke-server-44936.onmodulus.net';
+//var url_base = 'http://localhost:3000';
+var url_base = 'http://lufke-server-44936.onmodulus.net';
 
 var api = {
     user: {
