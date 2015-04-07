@@ -1,4 +1,4 @@
-angular.module('lufke').controller('NewsController', function(lodash, $http, $scope, $localStorage, $ionicPopup, PostsService, Camera) {
+angular.module('lufke').controller('NewsController', function(lodash, $http, $scope, $localStorage, $ionicPopup, PostsService /*, Camera, FileTransfer*/ ) {
     console.log('Inicia ... NewsController');
     $localStorage.$default({
         'newsUpdateNumber': 0
@@ -11,13 +11,11 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
             experienceText: ""
         };
     });
-    console.log("Numero refrescos:" + $localStorage.newsUpdateNumber);
     $scope.updateNews = function() {
         //TODO: hay que sacar el uso de localstorage, es solo para el dummy
         $localStorage.newsUpdateNumber++;
         $scope.$broadcast('scroll.refreshComplete');
         $http.get(api.post.getAll).success(function(posts) {
-            console.dir(posts);
             $scope.model = {
                 posts: posts,
                 isExperienceTextFocus: false,
@@ -40,21 +38,20 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
     };
     $scope.shareExperience = function() {
         //ingresa post en el usuario
-        var post = {
+        /*var post = {
             user_id: $localStorage.session,
             post_text: $scope.model.experienceText,
             image_file: $scope.model.mediaSelected
         };
         $http.post(api.post.create, post).success(function(user) {
             //borra contenido de la image/jpeg
-            console.dir(user);
             $scope.model.experienceText = "";
             $scope.model.mediaSelected = "";
             //recupera los post realizados para mostrarlos
             $http.get(api.post.getAll).success(function(posts) {
                 $scope.model.posts = posts;
             });
-        });
+        });*/
     };
     $scope.addMedia = function() {
         //TODO: remover $ionicPopup del controller y elegir archivos con Cordova
@@ -71,13 +68,31 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
         });
     };
     $scope.getPhoto = function() {
-        Camera.getPicture().then(function(imageData) {
-            $scope.model.mediaSelected = imageData;
+        console.log('getPhoto() ..');
+        var options = {
+            quality: 50,
+            correctOrientation: true,
+            destinationType: navigator.camera.DestinationType.DATA_URL, //DATA_URL,FILE_URI
+            encodingType: navigator.camera.EncodingType.PNG,//PNG,JPEG
+            sourceType: navigator.camera.PictureSourceType.CAMARA //CAMARA,PHOTOLIBRARY
+        };
+        navigator.camera.getPicture(function(imageURI) {
+            console.log('getPhoto() .. success .. upload');
+            $http.post(api.post.uploadTest, {
+                user_id: $localStorage.session,
+                post_text: $scope.model.isExperienceTextFocus,
+                image: imageURI
+            }).success(function(data) {
+                console.log('getPhoto() .. success .. upload .. success');
+                //console.dir(data);
+            }).error(function(err) {
+                console.log('getPhoto() .. success .. upload .. error');
+                //console.dir(err);
+            });
         }, function(err) {
+            console.log('getPhoto() .. error');
             $scope.model.mediaSelected = '';
-        }, {
-            destinationType: Camera.DestinationType.FILE_URI
-            
-        });
+        }, options);
+        return false;
     };
 });
