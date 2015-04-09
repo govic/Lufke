@@ -4,11 +4,9 @@
 		<ion-refresher pulling-text="Soltar para refrescar" on-refresh="updatePost()">
         </ion-refresher>
 
-		<a href="#/">
-			<div id="post-detail-content-container" class="item" ng-style="{'background-image':'url({{model.post.backgroundImgUrl}})'}">
-			</div>
-		</a>
-
+		<div id="post-detail-content-container" class="item" ng-style="{'background-image':'url(' + model.post.backgroundImgUrl + ')'}">
+		</div>
+		
 		<div class="row row-top">
 			<div id="post-detail-user-img-container">
 				<img id="post-detail-user-img" ng-src="{{model.post.authorUrlImage}}" alt="Foto de perfil"/>
@@ -20,10 +18,7 @@
 					<i class="ion-location"></i> {{model.post.authorLocation}}<br/>
 				</span>				
 				<span><i class="ion-clock"></i> </span><span am-time-ago="model.post.timestamp"></span>
-
 			</div>
-
-
 		</div>
 
 		<div class="row row-bottom">

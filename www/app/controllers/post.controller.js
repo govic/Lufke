@@ -4,6 +4,8 @@ angular.module('lufke').controller('PostController', function($http, $scope, $st
         post_id: $stateParams.postId,
         user_id: $localStorage.session
     }).success(function(post) {
+        post.backgroundImgUrl = getPostBackgroundUlr(post);
+        console.log(post.backgroundImgUrl);
         $scope.model = {
             post: post,
             commentText: ""
@@ -14,6 +16,8 @@ angular.module('lufke').controller('PostController', function($http, $scope, $st
             post_id: $stateParams.postId,
             user_id: $localStorage.session
         }).success(function(post) {
+            post.backgroundImgUrl = getPostBackgroundUlr(post);
+            console.log(post.backgroundImgUrl);
             $scope.$broadcast('scroll.refreshComplete');
             $scope.model.post = post;
         });
@@ -24,6 +28,7 @@ angular.module('lufke').controller('PostController', function($http, $scope, $st
             user_id: $localStorage.session,
             comment_text: $scope.model.commentText
         }).success(function(post) {
+            post.backgroundImgUrl = getPostBackgroundUlr(post);
             $scope.model = {
                 post: post,
                 commentText: ""

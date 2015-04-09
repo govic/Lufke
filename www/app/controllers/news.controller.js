@@ -4,10 +4,14 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
         'newsUpdateNumber': 0
     });
     $http.get(api.post.getAll).success(function(posts) {
+        lodash.each(posts, function(item) {
+            item.backgroundImgUrl = getPostBackgroundUlr(item);
+        });
         $scope.model = {
             posts: posts,
             isExperienceTextFocus: false,
-            mediaSelected: "",
+            mediaSelected: false,
+            imageBase64: "",
             experienceText: ""
         };
     });
@@ -16,10 +20,14 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
         $localStorage.newsUpdateNumber++;
         $scope.$broadcast('scroll.refreshComplete');
         $http.get(api.post.getAll).success(function(posts) {
+            lodash.each(posts, function(item) {
+                item.backgroundImgUrl = getPostBackgroundUlr(item);
+            });
             $scope.model = {
                 posts: posts,
                 isExperienceTextFocus: false,
-                mediaSelected: "",
+                mediaSelected: false,
+                imageBase64: "",
                 experienceText: ""
             };
         });
@@ -37,23 +45,23 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
         });
     };
     $scope.shareExperience = function() {
-        //ingresa post en el usuario
-        /*var post = {
-            user_id: $localStorage.session,
-            post_text: $scope.model.experienceText,
-            image_file: $scope.model.mediaSelected
-        };
-        $http.post(api.post.create, post).success(function(user) {
-            //borra contenido de la image/jpeg
-            $scope.model.experienceText = "";
-            $scope.model.mediaSelected = "";
-            //recupera los post realizados para mostrarlos
-            $http.get(api.post.getAll).success(function(posts) {
-                $scope.model.posts = posts;
+        if ($scope.model.mediaSelected || $scope.model.experienceText.length) {
+            var post = {
+                user_id: $localStorage.session,
+                post_text: $scope.model.experienceText,
+                image_base64: $scope.model.mediaSelected ? $scope.model.imageBase64 : ""
+            };
+            $http.post(api.post.create, post).success(function(user) {
+                $scope.model.experienceText = "";
+                $scope.model.mediaSelected = false;
+                $scope.model.imageBase64 = "";
+                $http.get(api.post.getAll).success(function(posts) {
+                    $scope.model.posts = posts;
+                });
             });
-        });*/
+        }
     };
-    $scope.addMedia = function() {
+    /*$scope.addMedia = function() {
         //TODO: remover $ionicPopup del controller y elegir archivos con Cordova
         var filePrompt = $ionicPopup.prompt({
             title: 'Agregar media',
@@ -66,32 +74,25 @@ angular.module('lufke').controller('NewsController', function(lodash, $http, $sc
                 $scope.model.mediaSelected = res;
             }
         });
-    };
+    };*/
     $scope.getPhoto = function() {
-        console.log('getPhoto() ..');
         var options = {
-            quality: 50,
+            quality: 75,
             correctOrientation: true,
             destinationType: navigator.camera.DestinationType.DATA_URL, //DATA_URL,FILE_URI
-            encodingType: navigator.camera.EncodingType.PNG,//PNG,JPEG
-            sourceType: navigator.camera.PictureSourceType.CAMARA //CAMARA,PHOTOLIBRARY
+            encodingType: navigator.camera.EncodingType.PNG, //PNG,JPEG
+            sourceType: navigator.camera.PictureSourceType.CAMARA, //CAMARA,PHOTOLIBRARY
+            allowEdit: true,
+            targetWidth: 420,
+            targetHeight: 420
         };
-        navigator.camera.getPicture(function(imageURI) {
-            console.log('getPhoto() .. success .. upload');
-            $http.post(api.post.uploadTest, {
-                user_id: $localStorage.session,
-                post_text: $scope.model.isExperienceTextFocus,
-                image: imageURI
-            }).success(function(data) {
-                console.log('getPhoto() .. success .. upload .. success');
-                //console.dir(data);
-            }).error(function(err) {
-                console.log('getPhoto() .. success .. upload .. error');
-                //console.dir(err);
-            });
+        navigator.camera.getPicture(function(imageBase64) {
+            $scope.model.mediaSelected = true;
+            $scope.model.imageBase64 = imageBase64;
         }, function(err) {
-            console.log('getPhoto() .. error');
-            $scope.model.mediaSelected = '';
+            alert("Ha ocurrido un error al intentar cargar la imagen.");
+            $scope.model.mediaSelected = false;
+            $scope.model.imageBase64 = "";
         }, options);
         return false;
     };

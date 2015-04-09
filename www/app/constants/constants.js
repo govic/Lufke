@@ -1,6 +1,7 @@
 //var url_base = 'http://localhost:3000'; //server local con explorador
-//var url_base = 'http://lufke-server-44936.onmodulus.net'; //server modulus
-var url_base = 'http://10.0.2.2:3000'; //server local dentro del emulador
+var url_base = 'http://lufke-server-44936.onmodulus.net'; //server modulus
+//var url_base = 'http://10.0.2.2:3000'; //server local dentro del emulador
+//var url_base = 'http://192.168.0.100:3000'; //server local dentro del emulador
 
 var api = {
     user: {
@@ -18,3 +19,7 @@ var api = {
     	}
     }
 };
+
+function getPostBackgroundUlr(post) {
+    return post.hasBackgroundImg ? url_base + "/images/posts/" + post._id + ".png" : "";
+}
